@@ -1,0 +1,125 @@
+********************
+"TKKG - Panik im Internat"
+********************
+
+In dieser "Liesmich"-Datei findest du einige wertvolle Tipps zur Installation der
+CD-ROM "TKKG - Panik im Internat".
+
+
+Inhalt:
+
+1. Allgemeine Hinweise
+2. Installation der CD-ROM
+3. Probleme mit der CD-ROM?
+4. Tivola Homepage
+------------------------------------------------------------------------------------
+
+
+==================
+1. Allgemeine Hinweise
+==================
+
+Damit du das Spiel "TKKG - Panik im Internat" optimal spielen
+kannst, muss dein Monitor auf 16bit (PC) bzw. 32768 (MAC) Farben eingestellt sein.
+
+Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das
+Programm schneller.
+
+Die CD-ROM sollte sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+
+Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
+zu können:
+Windows: 	* Win 95 / 98 / NT 4.0 / 2000 / ME / XP
+		* Pentium 166 MHz
+		* SVGA-Grafikkarte (16 Bit)
+		* Soundkarte
+		* CD-ROM-Laufwerk (4-fache Geschwindigkeit)
+		* mind. 32 MB RAM verfügbar
+		* mindestens 40 MB freier Festplattenspeicher (kleine Installation)
+		
+
+Macintosh:	* Mac OS 8.1 bis Mac OS 9.1
+		* Power PC
+		* Grafikkarte (32768 Farben)
+		* Soundkarte
+		* CD-ROM-Laufwerk (4-fache Geschwindigkeit)
+		* mind. 32 MB RAM verfügbar
+		* mindestens 40 MB freier Festplattenspeicher
+
+
+
+=====================
+2. Installation der CD-ROM
+=====================
+
+Bei der Installation solltest du folgendes beachten:
+
+Windows:
+Das Installations-Programm startet automatisch, wenn du "TKKG - Panik im Internat" in das
+CD-ROM-Laufwerk legst.
+
+Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
+starten:
+Gib im Menü "Datei/Ausführen" den Befehl "X:setup.exe" ein. Setze für "X" den
+Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
+
+Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
+von deiner Festplatte löschen. Dazu musst du im Startmenü/Programme/Tivola/TKKG10 
+das Icon "TKKG10 - Entfernen" klicken und den Anweisungen folgen.
+
+
+Macintosh:
+Nachdem du "TKKG - Panik im Internat" in das CD-ROM-Laufwerk gelegt hast, öffnet sich
+automatisch ein Fenster. Kopiere den Ordner "TKKG 10" auf deine Festplatte. 
+Wenn du in diesem Ordner das Icon "TKKG 10" anklickst, wird das Spiel gestartet.
+
+Um das Programm wieder von der Festplatte zu löschen, ziehst du die Datei "TKKG 10" 
+von der Festplatte auf den Papierkorb. 
+
+
+
+
+========================
+3. Probleme mit der CD-ROM ?
+========================
+
+Wenn du Probleme mit der CD-ROM hast oder im Spiel nicht weiterkommst, helfen wir dir
+auch gerne weiter.
+
+Unsere Hotline wartet auf deinen Anruf:	0190 - 08 10 02 (1,50€ pro Anruf)
+
+Es geht auch per e-mail: 			support@tivola.de
+
+Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
+					Münzstraße 19
+					10178 Berlin
+
+Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir
+deine Fragen umfassend beantworten können.
+Diese kurze Checkliste soll dir dabei helfen:
+
+- Welches Spiel spielst du?
+- Beschreibe dein Problem? Was für ein Fehler ist aufgetreten?
+- Was für einen Computer hast du? (Prozessor? Betriebssystem? ....)
+- Wieviel Speicherplatz hat dein Computer?
+- Besonderheiten?
+
+
+
+================
+4. Tivola Homepage
+================
+
+Besuche uns doch mal im Internet unter www.tivola.de. Hier findest du viele
+interessante Informationen zu Tivola und den Spielen.
+
+
+
+Viel Spaß!
+DEIN TIVOLA TEAM
+
+
+© Tivola Verlag GmbH, Berlin
+
+® Ein Fall für TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
+
