@@ -214,7 +214,7 @@ Next, use the `hdiutil` command to attach the disc image and mount it. This comm
 
 ```bash
 # Attach the disc image
-DEVICE=$(hdiutil attach ~/Downloads/TKKG1.cdr -nomount | head -1 | awk '{print $1}')
+DEVICE=$(hdiutil attach ~/Downloads/TKKG1.cdr -nomount -imagekey diskimage-class=CRawDiskImage | head -1 | awk '{print $1}')
 
 # Mount using the assigned device
 sudo mount -t cd9660 $DEVICE ~/TKKG1
