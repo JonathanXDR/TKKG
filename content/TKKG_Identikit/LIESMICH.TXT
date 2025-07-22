@@ -21,13 +21,13 @@ Inhalt:
 1. Allgemeine Hinweise
 ======================
 
-Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das
+Vor dem Start der CD-ROM solltest du alle anderen Programme schlieÃŸen. Dann lÃ¤uft das
 Programm schneller.
 
-Die CD-ROM muss sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+Die CD-ROM muss sich wÃ¤hrend des gesamten Spiels im CD-ROM-Laufwerk befinden.
 
-Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
-zu können:
+Bitte beachte die Mindestanforderungen fÃ¼r deinen Computer, um dieses Spiel spielen
+zu kÃ¶nnen:
 
 Windows: 
 WIN 95/98/NT, Pentium 100, 16 MB RAM, Soundkarte, 16 Bit High Color, 
@@ -49,20 +49,20 @@ das CD-ROM-Laufwerk legst.
 
 Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
 starten:
-Gib im Menü "Datei/Ausführen" den Befehl "X:Install.exe" ein. Setze für "X" den
+Gib im MenÃ¼ "Datei/AusfÃ¼hren" den Befehl "X:Install.exe" ein. Setze fÃ¼r "X" den
 Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
 
-Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
-von deiner Festplatte löschen. Dazu musst du im Tivola Spiele-Ordner auf
+Ãœbrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
+von deiner Festplatte lÃ¶schen. Dazu musst du im Tivola Spiele-Ordner auf
 das Icon "Phantombild Entfernen" klicken und den Anweisungen folgen. 
 
 
 Macintosh:
-Nachdem du "Das Phantombild Programm" in das CD-ROM-Laufwerk gelegt hast, öffnet sich
+Nachdem du "Das Phantombild Programm" in das CD-ROM-Laufwerk gelegt hast, Ã¶ffnet sich
 automatisch ein Fenster. Kopiere den Ordner "Phantombild" auf deine Festplatte. 
 Wenn du in diesem Ordner das Icon "TKKG Phantombild" anklickst, wird das Spiel gestartet.
 
-Um das Programm wieder von der Festplatte zu löschen, ziehst du die Datei "TKKG Phantombild"
+Um das Programm wieder von der Festplatte zu lÃ¶schen, ziehst du die Datei "TKKG Phantombild"
 von der Festplatte auf den Papierkorb. 
 
 
@@ -84,16 +84,16 @@ Vielleicht per Fax?				04307 - 83013-0
 Ganz modern geht's auch per e-mail: 		support@tivola.de
 
 Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
-						Münzstraße 19
+						MÃ¼nzstraÃŸe 19
 						10178 Berlin
 
-Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir
-deine Fragen umfassend beantworten können.
+Egal, welchen Weg du wÃ¤hlst, schildere dein Problem mÃ¶glichst genau, so dass wir
+deine Fragen umfassend beantworten kÃ¶nnen.
 Diese kurze Checkliste soll dir dabei helfen:
 
 - Welches Spiel spielst du?
-- Beschreibe dein Problem. Was für ein Fehler ist aufgetreten?
-- Was für einen Computer hast du? (Prozessor? Betriebssystem? ....)
+- Beschreibe dein Problem. Was fÃ¼r ein Fehler ist aufgetreten?
+- Was fÃ¼r einen Computer hast du? (Prozessor? Betriebssystem? ....)
 - Wieviel Speicherplatz hat dein Computer?
 - Besonderheiten?
 
@@ -107,7 +107,7 @@ interessante Informationen zu Tivola und den Spielen.
 
 
 
-Viel Spaß!
+Viel SpaÃŸ!
 DEIN TIVOLA TEAM
 
 

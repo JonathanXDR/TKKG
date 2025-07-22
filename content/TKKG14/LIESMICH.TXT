@@ -1,9 +1,9 @@
 *********************************
-"TKKG - Gefährliche Ferien"
+"TKKG - GefÃ¤hrliche Ferien"
 *********************************
 
 In dieser "Liesmich"-Datei findest du einige wertvolle Tipps zur Installation der
-CD-ROM "TKKG - Gefährliche Ferien".
+CD-ROM "TKKG - GefÃ¤hrliche Ferien".
 
 
 Inhalt:
@@ -21,19 +21,19 @@ Inhalt:
 1. Allgemeine Hinweise
 ======================
 
-Damit du das Spiel "TKKG - Gefährliche Ferien" optimal spielen
+Damit du das Spiel "TKKG - GefÃ¤hrliche Ferien" optimal spielen
 kannst, muss dein Monitor auf 16bit (PC) bzw. 32768 (MAC) Farben eingestellt sein.
 
-Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das
+Vor dem Start der CD-ROM solltest du alle anderen Programme schlieÃŸen. Dann lÃ¤uft das
 Programm schneller.
 
-Die CD-ROM sollte sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+Die CD-ROM sollte sich wÃ¤hrend des gesamten Spiels im CD-ROM-Laufwerk befinden.
 
-Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
-zu können:
+Bitte beachte die Mindestanforderungen fÃ¼r deinen Computer, um dieses Spiel spielen
+zu kÃ¶nnen:
 
 Windows: 	* Win 98 / ME / 2000 / XP
-		* Pentium II oder höher
+		* Pentium II oder hÃ¶her
 		* 400 MHz
 		* 64 MB RAM
 		* SVGA-Grafikkarte (16 Bit) 
@@ -44,7 +44,7 @@ Windows: 	* Win 98 / ME / 2000 / XP
 		
 
 Macintosh:	OS X
-		* OS 10.1.2 oder höher
+		* OS 10.1.2 oder hÃ¶her
 		* Power Macintosh G3
 
 		Classic
@@ -66,24 +66,24 @@ Macintosh:	OS X
 Bei der Installation solltest du folgendes beachten:
 
 Windows:
-Das Installations-Programm startet automatisch, wenn du "TKKG - Gefährliche Ferien" 
+Das Installations-Programm startet automatisch, wenn du "TKKG - GefÃ¤hrliche Ferien" 
 in das CD-ROM-Laufwerk legst.
 
 Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
 starten:
-Gib im Menü "Datei/Ausführen" den Befehl "X:setup.exe" ein. Setze für "X" den
+Gib im MenÃ¼ "Datei/AusfÃ¼hren" den Befehl "X:setup.exe" ein. Setze fÃ¼r "X" den
 Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
 
-Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
-von deiner Festplatte löschen. Dazu musst du im Startmenü/Programme/Tivola/TKKG14 
+Ãœbrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
+von deiner Festplatte lÃ¶schen. Dazu musst du im StartmenÃ¼/Programme/Tivola/TKKG14 
 das Icon "TKKG 14 - Entfernen" klicken und den Anweisungen folgen.
 
 
 Macintosh:
-Nachdem du "TKKG - Gefährliche Ferien" in das CD-ROM-Laufwerk gelegt hast, öffnet sich
+Nachdem du "TKKG - GefÃ¤hrliche Ferien" in das CD-ROM-Laufwerk gelegt hast, Ã¶ffnet sich
 automatisch ein Fenster. Klicke das Icon "TKKG 14" an und das Spiel wird gestartet.
 
-Um "TKKG - Gefährliche Ferien" wieder zu entfernen, ziehst du den Ordner "TKKG 14" 
+Um "TKKG - GefÃ¤hrliche Ferien" wieder zu entfernen, ziehst du den Ordner "TKKG 14" 
 einfach auf den Papierkorb. 
 
 
@@ -92,11 +92,11 @@ einfach auf den Papierkorb.
 3. Grafische Probleme ?
 ============================
 
-In Einzelfällen kann es passieren, dass auf Apple MacIntosh Computern grafische Fehler
-im Finalspiel von "TKKG - Gefährliche Ferien" auftreten. Du kannst diese Fehler durch
-Drücken der Tastenkombinationen Apfel + Umschalttaste + 0 oder Apfel + Umschalttaste
+In EinzelfÃ¤llen kann es passieren, dass auf Apple MacIntosh Computern grafische Fehler
+im Finalspiel von "TKKG - GefÃ¤hrliche Ferien" auftreten. Du kannst diese Fehler durch
+DrÃ¼cken der Tastenkombinationen Apfel + Umschalttaste + 0 oder Apfel + Umschalttaste
 + - beheben. 
-Außerdem empfehlen wir dir immer die aktuellen Treiber für deine Grafikkarte
+AuÃŸerdem empfehlen wir dir immer die aktuellen Treiber fÃ¼r deine Grafikkarte
 zu installieren.
 
 
@@ -113,16 +113,16 @@ Unsere Hotline wartet auf deinen Anruf:		0190 - 08 10 02 (0,12 Euro pro Minute)
 Es geht auch per e-mail: 			support@tivola.de
 
 Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
-						Münzstrasse 19
+						MÃ¼nzstrasse 19
 						10178 Berlin
 
-Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir
-deine Fragen umfassend beantworten können.
+Egal, welchen Weg du wÃ¤hlst, schildere dein Problem mÃ¶glichst genau, so dass wir
+deine Fragen umfassend beantworten kÃ¶nnen.
 Diese kurze Checkliste soll dir dabei helfen:
 
 - Welches Spiel spielst du?
-- Beschreibe dein Problem. Was für ein Fehler ist aufgetreten?
-- Was für einen Computer hast du? (Prozessor? Betriebssystem? Grafikkarte? ....)
+- Beschreibe dein Problem. Was fÃ¼r ein Fehler ist aufgetreten?
+- Was fÃ¼r einen Computer hast du? (Prozessor? Betriebssystem? Grafikkarte? ....)
 - Wie viel Speicherplatz hat dein Computer?
 - Besonderheiten?
 
@@ -133,9 +133,9 @@ Diese kurze Checkliste soll dir dabei helfen:
 =====================
 
 Du kommst an einer Stelle im Spiel nicht weiter?
-Kein Problem! Auf der CD-ROM findest du eine Hilfe-Datei, die dir bei der Lösung
-von "TKKG - Gefährliche Ferien" hilft. Um diese Hilfe-Datei lesen zu können,
-benötigst du das Programm Acrobat Reader.
+Kein Problem! Auf der CD-ROM findest du eine Hilfe-Datei, die dir bei der LÃ¶sung
+von "TKKG - GefÃ¤hrliche Ferien" hilft. Um diese Hilfe-Datei lesen zu kÃ¶nnen,
+benÃ¶tigst du das Programm Acrobat Reader.
 
 
 
@@ -148,11 +148,11 @@ interessante Informationen zu Tivola und den Spielen.
 
 
 
-Viel Spaß!
+Viel SpaÃŸ!
 DEIN TIVOLA TEAM
 
 
 (C) Tivola Verlag GmbH, Berlin
 
-(C) Ein Fall für TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
+(C) Ein Fall fÃ¼r TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
 

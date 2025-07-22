@@ -22,15 +22,15 @@ Inhalt:
 Damit du das Spiel "TKKG - Alarm in der Geisterbahn" optimal spielen
 kannst, muss dein Monitor auf 16bit (PC) bzw. 32768 (MAC) Farben eingestellt sein.
 
-Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das
+Vor dem Start der CD-ROM solltest du alle anderen Programme schlieÃŸen. Dann lÃ¤uft das
 Programm schneller.
 
-Die CD-ROM sollte sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+Die CD-ROM sollte sich wÃ¤hrend des gesamten Spiels im CD-ROM-Laufwerk befinden.
 
-Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
-zu können:
+Bitte beachte die Mindestanforderungen fÃ¼r deinen Computer, um dieses Spiel spielen
+zu kÃ¶nnen:
 Windows: 	* Win 95 / 98 / ME / 2000 / XP
-		* Pentium II oder höher
+		* Pentium II oder hÃ¶her
 		* 300 MHz
 		* mind. 32 MB RAM
 		* SVGA-Grafikkarte (16 Bit)
@@ -66,16 +66,16 @@ CD-ROM-Laufwerk legst.
 
 Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
 starten:
-Gib im Menü "Datei/Ausführen" den Befehl "X:setup.exe" ein. Setze für "X" den
+Gib im MenÃ¼ "Datei/AusfÃ¼hren" den Befehl "X:setup.exe" ein. Setze fÃ¼r "X" den
 Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
 
-Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
-von deiner Festplatte löschen. Dazu musst du im Startmenü/Programme/Tivola/TKKG12 
+Ãœbrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
+von deiner Festplatte lÃ¶schen. Dazu musst du im StartmenÃ¼/Programme/Tivola/TKKG12 
 das Icon "TKKG 12 - Entfernen" klicken und den Anweisungen folgen.
 
 
 Macintosh:
-Nachdem du "TKKG - Alarm in der Geisterbahn" in das CD-ROM-Laufwerk gelegt hast, öffnet sich
+Nachdem du "TKKG - Alarm in der Geisterbahn" in das CD-ROM-Laufwerk gelegt hast, Ã¶ffnet sich
 automatisch ein Fenster. Klicke das Icon "TKKG 12" an und das Spiel wird gestartet.
 
 Um "TKKG - Alarm in der Geisterbahn" wieder zu entfernen, ziehst du den Ordner "TKKG 12" 
@@ -98,13 +98,13 @@ Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
 						Postfach 02 56 03
 						10129 Berlin
 
-Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir
-deine Fragen umfassend beantworten können.
+Egal, welchen Weg du wÃ¤hlst, schildere dein Problem mÃ¶glichst genau, so dass wir
+deine Fragen umfassend beantworten kÃ¶nnen.
 Diese kurze Checkliste soll dir dabei helfen:
 
 - Welches Spiel spielst du?
-- Beschreibe dein Problem? Was für ein Fehler ist aufgetreten?
-- Was für einen Computer hast du? (Prozessor? Betriebssystem? ....)
+- Beschreibe dein Problem? Was fÃ¼r ein Fehler ist aufgetreten?
+- Was fÃ¼r einen Computer hast du? (Prozessor? Betriebssystem? ....)
 - Wieviel Speicherplatz hat dein Computer?
 - Besonderheiten?
 
@@ -119,11 +119,11 @@ interessante Informationen zu Tivola und den Spielen.
 
 
 
-Viel Spaß!
+Viel SpaÃŸ!
 DEIN TIVOLA TEAM
 
 
 (C) Tivola Verlag GmbH, Berlin
 
-(C) Ein Fall für TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
+(C) Ein Fall fÃ¼r TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
 

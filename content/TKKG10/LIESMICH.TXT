@@ -22,19 +22,19 @@ Inhalt:
 Damit du das Spiel "TKKG - Panik im Internat" optimal spielen
 kannst, muss dein Monitor auf 16bit (PC) bzw. 32768 (MAC) Farben eingestellt sein.
 
-Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das
+Vor dem Start der CD-ROM solltest du alle anderen Programme schlieÃŸen. Dann lÃ¤uft das
 Programm schneller.
 
-Die CD-ROM sollte sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+Die CD-ROM sollte sich wÃ¤hrend des gesamten Spiels im CD-ROM-Laufwerk befinden.
 
-Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
-zu können:
+Bitte beachte die Mindestanforderungen fÃ¼r deinen Computer, um dieses Spiel spielen
+zu kÃ¶nnen:
 Windows: 	* Win 95 / 98 / NT 4.0 / 2000 / ME / XP
 		* Pentium 166 MHz
 		* SVGA-Grafikkarte (16 Bit)
 		* Soundkarte
 		* CD-ROM-Laufwerk (4-fache Geschwindigkeit)
-		* mind. 32 MB RAM verfügbar
+		* mind. 32 MB RAM verfÃ¼gbar
 		* mindestens 40 MB freier Festplattenspeicher (kleine Installation)
 		
 
@@ -43,7 +43,7 @@ Macintosh:	* Mac OS 8.1 bis Mac OS 9.1
 		* Grafikkarte (32768 Farben)
 		* Soundkarte
 		* CD-ROM-Laufwerk (4-fache Geschwindigkeit)
-		* mind. 32 MB RAM verfügbar
+		* mind. 32 MB RAM verfÃ¼gbar
 		* mindestens 40 MB freier Festplattenspeicher
 
 
@@ -60,20 +60,20 @@ CD-ROM-Laufwerk legst.
 
 Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
 starten:
-Gib im Menü "Datei/Ausführen" den Befehl "X:setup.exe" ein. Setze für "X" den
+Gib im MenÃ¼ "Datei/AusfÃ¼hren" den Befehl "X:setup.exe" ein. Setze fÃ¼r "X" den
 Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
 
-Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
-von deiner Festplatte löschen. Dazu musst du im Startmenü/Programme/Tivola/TKKG10 
+Ãœbrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
+von deiner Festplatte lÃ¶schen. Dazu musst du im StartmenÃ¼/Programme/Tivola/TKKG10 
 das Icon "TKKG10 - Entfernen" klicken und den Anweisungen folgen.
 
 
 Macintosh:
-Nachdem du "TKKG - Panik im Internat" in das CD-ROM-Laufwerk gelegt hast, öffnet sich
+Nachdem du "TKKG - Panik im Internat" in das CD-ROM-Laufwerk gelegt hast, Ã¶ffnet sich
 automatisch ein Fenster. Kopiere den Ordner "TKKG 10" auf deine Festplatte. 
 Wenn du in diesem Ordner das Icon "TKKG 10" anklickst, wird das Spiel gestartet.
 
-Um das Programm wieder von der Festplatte zu löschen, ziehst du die Datei "TKKG 10" 
+Um das Programm wieder von der Festplatte zu lÃ¶schen, ziehst du die Datei "TKKG 10" 
 von der Festplatte auf den Papierkorb. 
 
 
@@ -86,21 +86,21 @@ von der Festplatte auf den Papierkorb.
 Wenn du Probleme mit der CD-ROM hast oder im Spiel nicht weiterkommst, helfen wir dir
 auch gerne weiter.
 
-Unsere Hotline wartet auf deinen Anruf:	0190 - 08 10 02 (1,50€ pro Anruf)
+Unsere Hotline wartet auf deinen Anruf:	0190 - 08 10 02 (1,50â‚¬ pro Anruf)
 
 Es geht auch per e-mail: 			support@tivola.de
 
 Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
-					Münzstraße 19
+					MÃ¼nzstraÃŸe 19
 					10178 Berlin
 
-Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir
-deine Fragen umfassend beantworten können.
+Egal, welchen Weg du wÃ¤hlst, schildere dein Problem mÃ¶glichst genau, so dass wir
+deine Fragen umfassend beantworten kÃ¶nnen.
 Diese kurze Checkliste soll dir dabei helfen:
 
 - Welches Spiel spielst du?
-- Beschreibe dein Problem? Was für ein Fehler ist aufgetreten?
-- Was für einen Computer hast du? (Prozessor? Betriebssystem? ....)
+- Beschreibe dein Problem? Was fÃ¼r ein Fehler ist aufgetreten?
+- Was fÃ¼r einen Computer hast du? (Prozessor? Betriebssystem? ....)
 - Wieviel Speicherplatz hat dein Computer?
 - Besonderheiten?
 
@@ -115,11 +115,11 @@ interessante Informationen zu Tivola und den Spielen.
 
 
 
-Viel Spaß!
+Viel SpaÃŸ!
 DEIN TIVOLA TEAM
 
 
-© Tivola Verlag GmbH, Berlin
+Â© Tivola Verlag GmbH, Berlin
 
-® Ein Fall für TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
+Â® Ein Fall fÃ¼r TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
 
