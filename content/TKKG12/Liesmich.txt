@@ -1,0 +1,129 @@
+*********************************
+"TKKG - Alarm in der Geisterbahn"
+*********************************
+
+In dieser "Liesmich"-Datei findest du einige wertvolle Tipps zur Installation der
+CD-ROM "TKKG - Alarm in der Geisterbahn".
+
+
+Inhalt:
+
+1. Allgemeine Hinweise
+2. Installation der CD-ROM
+3. Probleme mit der CD-ROM?
+4. Tivola Homepage
+------------------------------------------------------------------------------------
+
+
+======================
+1. Allgemeine Hinweise
+======================
+
+Damit du das Spiel "TKKG - Alarm in der Geisterbahn" optimal spielen
+kannst, muss dein Monitor auf 16bit (PC) bzw. 32768 (MAC) Farben eingestellt sein.
+
+Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das
+Programm schneller.
+
+Die CD-ROM sollte sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+
+Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
+zu können:
+Windows: 	* Win 95 / 98 / ME / 2000 / XP
+		* Pentium II oder höher
+		* 300 MHz
+		* mind. 32 MB RAM
+		* SVGA-Grafikkarte (16 Bit)
+		* Soundkarte
+		* CD-ROM-Laufwerk (8-fache Geschwindigkeit)
+		* mindestens 40 MB freier Festplattenspeicher
+		
+
+Macintosh:	OS X
+		* OS 10.1.2
+		* Power Macintosh G3
+
+		Classic
+		* ab Mac OS 8.6
+		* Power PC G3 ab 400 MHz
+		* 64 MB RAM
+		* Grafikkarte (32768 Farben)
+		* Soundkarte
+		* CD-ROM-Laufwerk (8-fache Geschwindigkeit)
+		* mindestens 40 MB freier Festplattenspeicher
+
+
+
+==========================
+2. Installation der CD-ROM
+==========================
+
+Bei der Installation solltest du folgendes beachten:
+
+Windows:
+Das Installations-Programm startet automatisch, wenn du "TKKG - Alarm in der Geisterbahn" in das
+CD-ROM-Laufwerk legst.
+
+Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
+starten:
+Gib im Menü "Datei/Ausführen" den Befehl "X:setup.exe" ein. Setze für "X" den
+Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
+
+Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten
+von deiner Festplatte löschen. Dazu musst du im Startmenü/Programme/Tivola/TKKG12 
+das Icon "TKKG 12 - Entfernen" klicken und den Anweisungen folgen.
+
+
+Macintosh:
+Nachdem du "TKKG - Alarm in der Geisterbahn" in das CD-ROM-Laufwerk gelegt hast, öffnet sich
+automatisch ein Fenster. Klicke das Icon "TKKG 12" an und das Spiel wird gestartet.
+
+Um "TKKG - Alarm in der Geisterbahn" wieder zu entfernen, ziehst du den Ordner "TKKG 12" 
+einfach auf den Papierkorb. 
+
+
+
+
+============================
+3. Probleme mit der CD-ROM ?
+============================
+
+Wenn du Probleme mit der CD-ROM hast oder im Spiel nicht weiterkommst, helfen wir dir
+auch gerne weiter.
+Unsere Hotline wartet auf deinen Anruf:		0190 - 08 10 02 (0,12 Euro pro Minute)
+
+Es geht auch per e-mail: 			support@tivola.de
+
+Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
+						Postfach 02 56 03
+						10129 Berlin
+
+Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir
+deine Fragen umfassend beantworten können.
+Diese kurze Checkliste soll dir dabei helfen:
+
+- Welches Spiel spielst du?
+- Beschreibe dein Problem? Was für ein Fehler ist aufgetreten?
+- Was für einen Computer hast du? (Prozessor? Betriebssystem? ....)
+- Wieviel Speicherplatz hat dein Computer?
+- Besonderheiten?
+
+
+
+==================
+4. Tivola Homepage
+==================
+
+Besuche uns doch mal im Internet unter www.tivola.de. Hier findest du viele
+interessante Informationen zu Tivola und den Spielen.
+
+
+
+Viel Spaß!
+DEIN TIVOLA TEAM
+
+
+(C) Tivola Verlag GmbH, Berlin
+
+(C) Ein Fall für TKKG ist eine eingetragene Marke der Pelikan Vertriebsgesellschaft, Hannover
+
