@@ -1,0 +1,125 @@
+****************************************************"TKKG: Der Fälscherbande auf der Spur"
+****************************************************
+In dieser "Liesmich"-Datei findest du einige wertvolle Tipps zur Installation der
+CD-ROM "TKKG: Der Fälscherbande auf der Spur".
+
+
+Inhalt:
+
+1. Allgemeine Hinweise
+2. Installation der CD-ROM
+3. Installation von Acrobat Reader
+4. Probleme mit der CD-ROM?
+5. Tivola Homepage
+
+
+--------------------------------------------------------------
+
+
+======================
+1. Allgemeine Hinweise
+======================
+
+Damit du das Spiel "TKKG: Der Fälscherbande auf der Spur" optimal spielen kannst, muss dein Monitor auf 256 Farben eingestellt sein.
+
+Vor dem Start der CD-ROM solltest du alle anderen Programme schließen. Dann läuft das Programm schneller.
+
+Die CD-ROM muss sich während des gesamten Spiels im CD-ROM-Laufwerk befinden.
+
+Bitte beachte die Mindestanforderungen für deinen Computer, um dieses Spiel spielen
+zu können:
+
+Windows:
+486er PC, 8 MB RAM, SVGA-Grafikkarte ab 256 Farben, Soundkarte,
+CD-ROM-Laufwerk(doppelte Geschwindigkeit), WIN 3.x/WIN 95, 98/NT 4.0
+
+Macintosh:
+8 MB RAM, System 7.1, CD-ROM-Laufwerk (doppelte Geschwindigkeit)
+
+==========================
+2. Installation der CD-ROM
+==========================
+
+Bei der Installation solltest du folgendes beachten:
+
+Windows:
+Das Installationsprogramm startet automatisch, wenn du "TKKG: Der Fälscherbande auf 
+der Spur" in das CD-ROM-Laufwerk legst.
+
+Falls die Funktion "Autostart" in Windows ausgeschaltet ist, kannst du die CD-ROM so
+starten:
+Gib im Menü "Datei/Ausführen" den Befehl "X:Install.exe" ein. Setze für "X" den Laufwerksbuchstaben deines CD-ROM-Laufwerks ein. Klicke auf "OK" und folge den Anweisungen.
+
+Übrigens: Du kannst jederzeit mit dem De-Installationsprogramm alle installierten Daten von deiner Festplatte löschen. Dazu musst du im Tivola Spiele-Ordner auf
+das Icon "Entfernen TKKG 6" klicken und den Anweisungen folgen.
+
+
+Macintosh:
+Nachdem du "TKKG: Der Fälscherbande auf der Spur" in das CD-ROM-Laufwerk gelegt hast, öffnet sich automatisch ein Fenster. Kopiere den Ordner "TKKG 6" auf deine Festplatte.
+Wenn du in diesem Ordner das Icon "TKKG start" anklickst wird das Spiel gestartet.
+
+Um das Programm wieder von der Festplatte zu löschen, ziehst du die Datei "TKKG 6" von der Festplatte auf den Papierkorb.
+
+
+
+================================================
+3. Installation von Acrobat Reader
+================================================
+
+Acrobat Reader 
+--------------
+Du brauchst das Programm Acrobat Reader, um die Hilfedatei öffnen zu können. Darin findest du Hilfe bei der Lösung des Spiels.
+
+Hast du das Programm Acrobat Reader schon auf deinem Computer installiert? Dann kannst du jederzeit während des Spiels, wenn du mal nicht weiter weißt, in dieHilfedatei schauen. 
+
+Fehlt dir Acrobat Reader noch und du möchtest es installieren? So geht´s:
+
+Windows 95, 98, 2000, NT 4.0:
+
+Klicke im Tivola Spiele-Ordner auf das Icon "Acrobat Reader" und folge den Anweisungen. Nach erfolgreicher Installation kannst du die Hilfedatei öffnen.
+
+Macintosh:
+
+Du findest direkt auf der CD-ROM einen Ordner "Acrobat Reader". Öffne ihn, klicke auf "Acrobat Reader installieren" und folge den Anweisungen. Wenn die Installation abgeschlossen ist, kannst du die Hilfedatei öffnen.
+
+
+
+============================
+4. Probleme mit der CD-ROM ?
+============================
+
+Wenn du Probleme mit der CD-ROM hast oder im Spiel nicht weiterkommst, helfen wir dir auch gerne weiter.
+
+Unsere Hotline wartet auf deinen Anruf: 	0180 - 2848652 (Tivola)
+
+Vielleicht per Fax?				04307 - 83013-0
+						04307 - 83013-1
+						04307 - 83013-2
+
+Ganz modern geht's auch per e-mail: 	support@tivola.de
+
+Oder willst du uns lieber schreiben?		Tivola Verlag GmbH
+						Münzstraße 19
+						10178 Berlin
+
+Egal, welchen Weg du wählst, schildere dein Problem möglichst genau, so dass wir deine Fragen umfassend beantworten können. Diese kurze Checkliste soll dir dabei helfen:
+
+- Welches Spiel spielst du?
+- Beschreibe dein Problem? Was für ein Fehler ist aufgetreten?
+- Was für einen Computer hast du? (Prozessor? Betriebssystem? ....)
+- Wieviel Speicherplatz hat dein Computer?
+- Besonderheiten?
+
+
+==================
+5. Tivola Homepage
+==================
+
+Besuche uns doch mal im Internet unter www.tivola.de. Hier findest du viele interessante Informationen zu Tivola und den Spielen.
+
+
+
+Viel Spaß!DEIN TIVOLA TEAM
+
+
+(c) Tivola Verlag GmbH, Berlin
