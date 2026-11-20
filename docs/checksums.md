@@ -42,8 +42,8 @@ The games were tested with these images, with two exceptions. The English Identi
 | TKKG 12 | [tkkg-12](https://archive.org/details/tkkg-12) | `TKKG12.iso` | 480,014,336 | `a8202c4b0693c0ed9adef7880f4b51ec605e207d` |
 | TKKG 13 | [tkkg-13](https://archive.org/details/tkkg-13) | `TKKG13.iso` | 617,869,312 | `d2b0b4a167f7afb4ab78ca1bcad030212713faa9` |
 | TKKG 14 | [tkkg-14](https://archive.org/details/tkkg-14) | `TKKG14.iso` | 519,098,368 | `f3827ef988129a9eda27898df7bb6e782fc77421` |
-| Identikit (English) | [Identikit](https://archive.org/details/Identikit) | `Identikit.iso` | 49,698,816 | `eda168d745314ec2781f92e477c675bd2d5f4215` |
-| Identikit (German) | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
+| Identikit (EN) | [Identikit](https://archive.org/details/Identikit) | `Identikit.iso` | 49,698,816 | `eda168d745314ec2781f92e477c675bd2d5f4215` |
+| Identikit (DE) | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
 
 ## Macintosh Repository archives
 
@@ -56,7 +56,7 @@ shasum ~/Downloads/*.sit
 | Game | Archive | SHA-1 |
 | --- | --- | --- |
 | TKKG 10 | `TKKG10.iso_.sit` | `88687b0d85353a9a86cb89cf0349ed43b086e205` |
-| Identikit (German) | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` |
+| Identikit (DE) | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` |
 
 ## Incomplete copies
 

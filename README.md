@@ -56,24 +56,24 @@ Most games come from the Internet Archive as disc images that UTM uses directly.
 
 | Game | German title | Download | Disc image | Languages |
 | --- | --- | --- | --- | --- |
-| TKKG 1 | Katjas Geheimnis | [Internet Archive](https://archive.org/details/tkkg-01) | `TKKG 01.iso` | German, English |
-| TKKG 2 | Tödliche Schokolade | [Internet Archive](https://archive.org/details/tkkg-02) | `TKKG 02.iso` | German, English |
-| TKKG 3 | Der Schatz der Maya | [Internet Archive](https://archive.org/details/tkkg-03) | `TKKG 03.iso` | German, English |
-| TKKG 4 | Das Rätsel der Villa Drachenkralle | [Internet Archive](https://archive.org/details/tkkg-4_202605) | `TKKG 04.iso` | German, English |
-| TKKG 5 | Verrat an TKKG | [Internet Archive](https://archive.org/details/tkkg-05) | `TKKG 05.iso` | German, English |
-| TKKG 6 | Der Fälscherbande auf der Spur | [Internet Archive](https://archive.org/details/tkkg-06) | `TKKG 06.iso` | German, English |
-| TKKG 7 | Wer stoppt den Feuerteufel? | [Internet Archive](https://archive.org/details/tkkg-7_202201) | `TKKG7.iso` | German, English |
-| TKKG 8 | Das geheimnisvolle Testament | [Internet Archive](https://archive.org/details/tkkg-8_202201) | `TKKG8.iso` | German, English |
-| TKKG 9 | Voodoozauber | [Internet Archive](https://archive.org/details/tkkg-9_202201) | `TKKG9.iso` | German, English |
-| TKKG 10 | Panik im Internat | [Macintosh Repository](https://www.macintoshrepository.org/2997-tkkg-10-panik-im-internat) | `TKKG.iso` | German |
-| TKKG 11 | Film ab! | [Internet Archive](https://archive.org/details/tkkg-11) | `TKKG11.iso` | German |
-| TKKG 12 | Alarm in der Geisterbahn | [Internet Archive](https://archive.org/details/tkkg-12) | `TKKG12.iso` | German |
-| TKKG 13 | Zelle 13 | [Internet Archive](https://archive.org/details/tkkg-13) | `TKKG13.iso` | German |
-| TKKG 14 | Gefährliche Ferien | [Internet Archive](https://archive.org/details/tkkg-14) | `TKKG14.iso` | German |
-| Identikit (English) | Das Phantombild Programm | [Internet Archive](https://archive.org/details/Identikit) | `Identikit.iso` | English |
-| Identikit (German) | Das Phantombild Programm | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | German |
+| TKKG 1 | Katjas Geheimnis | [Internet Archive](https://archive.org/details/tkkg-01) | `TKKG 01.iso` | DE, EN |
+| TKKG 2 | Tödliche Schokolade | [Internet Archive](https://archive.org/details/tkkg-02) | `TKKG 02.iso` | DE, EN |
+| TKKG 3 | Der Schatz der Maya | [Internet Archive](https://archive.org/details/tkkg-03) | `TKKG 03.iso` | DE, EN |
+| TKKG 4 | Das Rätsel der Villa Drachenkralle | [Internet Archive](https://archive.org/details/tkkg-4_202605) | `TKKG 04.iso` | DE, EN |
+| TKKG 5 | Verrat an TKKG | [Internet Archive](https://archive.org/details/tkkg-05) | `TKKG 05.iso` | DE, EN |
+| TKKG 6 | Der Fälscherbande auf der Spur | [Internet Archive](https://archive.org/details/tkkg-06) | `TKKG 06.iso` | DE, EN |
+| TKKG 7 | Wer stoppt den Feuerteufel? | [Internet Archive](https://archive.org/details/tkkg-7_202201) | `TKKG7.iso` | DE, EN |
+| TKKG 8 | Das geheimnisvolle Testament | [Internet Archive](https://archive.org/details/tkkg-8_202201) | `TKKG8.iso` | DE, EN |
+| TKKG 9 | Voodoozauber | [Internet Archive](https://archive.org/details/tkkg-9_202201) | `TKKG9.iso` | DE, EN |
+| TKKG 10 | Panik im Internat | [Macintosh Repository](https://www.macintoshrepository.org/2997-tkkg-10-panik-im-internat) | `TKKG.iso` | DE |
+| TKKG 11 | Film ab! | [Internet Archive](https://archive.org/details/tkkg-11) | `TKKG11.iso` | DE |
+| TKKG 12 | Alarm in der Geisterbahn | [Internet Archive](https://archive.org/details/tkkg-12) | `TKKG12.iso` | DE |
+| TKKG 13 | Zelle 13 | [Internet Archive](https://archive.org/details/tkkg-13) | `TKKG13.iso` | DE |
+| TKKG 14 | Gefährliche Ferien | [Internet Archive](https://archive.org/details/tkkg-14) | `TKKG14.iso` | DE |
+| Identikit (EN) | Das Phantombild Programm | [Internet Archive](https://archive.org/details/Identikit) | `Identikit.iso` | EN |
+| Identikit (DE) | Das Phantombild Programm | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | DE |
 
-TKKG 1 to 9 contain both the German and the English version on one disc.
+DE stands for German and EN for English. TKKG 1 to 9 contain both language versions on one disc.
 
 1. Create a folder named `TKKG` in your home folder: in the Finder, choose Go > Home, then File > New Folder.
 2. For each game with an Internet Archive link in the table, open the link and click ISO IMAGE under Download Options. Move the downloaded disc image from your Downloads folder to the `TKKG` folder.
@@ -186,8 +186,8 @@ To shut down the VM, choose Special > Shut Down in Mac OS 9. The Special menu be
 | TKKG 7 to 9 | TKKG 7, TKKG 8, TKKG 9 | TKKG-Start | Thousands |
 | TKKG 10 | TKKG10 | TKKG10 | Thousands, 800 × 600 or more |
 | TKKG 11 to 14 | None (they start from the disc) | TKKG11, TKKG12, TKKG13, TKKG14 | Thousands, 800 × 600 or more |
-| Identikit (English) | Identikit | Identikit Start | Thousands |
-| Identikit (German) | Phantombild | Phantombild Start | Thousands |
+| Identikit (EN) | Identikit | Identikit Start | Thousands |
+| Identikit (DE) | Phantombild | Phantombild Start | Thousands |
 
 The table shows the names on the discs. The original readme files sometimes spell them differently. TKKG 7 to 14 and the German Identikit ran at Thousands in testing. Thousands is the Mac OS name for 32,768 colours, which most readme and help files of these games ask for, including the English Identikit's readme.
 
