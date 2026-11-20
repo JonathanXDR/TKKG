@@ -188,9 +188,9 @@ The [`content`](content) folder holds documentation copied from the original dis
 
 | Folder | Contents |
 | --- | --- |
-| [`TKKG1`](content/TKKG1) | Readme with hidden hints. Printouts: decoder disc with assembly instructions, Oma Peper's chocolate cake recipe (German and English). |
-| [`TKKG2`](content/TKKG2) | Readme with hidden hints. Printout: Sauerlich's special biscuits recipe (German and English). |
-| [`TKKG3`](content/TKKG3) | Readme with hidden hints. |
+| [`TKKG1`](content/TKKG1) | Windows and Mac readmes, both with hidden hints. Printouts: decoder disc with assembly instructions, Oma Peper's chocolate cake recipe (German and English). |
+| [`TKKG2`](content/TKKG2) | Windows and Mac readmes, both with hidden hints. Printout: Sauerlich's special biscuits recipe (German and English). |
+| [`TKKG3`](content/TKKG3) | Windows and Mac readmes, both with hidden hints. |
 | [`TKKG4`](content/TKKG4) | Help file with the solution. Web pages from the in-game city archive computer (`HTMLD` German, `HTMLE` English). Printouts: piano basics, "Für Elise" sheet music, Oma Peper's nut cake recipe (German and English). |
 | [`TKKG5`](content/TKKG5), [`TKKG6`](content/TKKG6), [`TKKG9`](content/TKKG9) | Help file with the solution. |
 | [`TKKG7`](content/TKKG7) | Help file with the solution. The readme belongs to TKKG 6: the original TKKG 7 disc contains the same mix-up. |
@@ -200,6 +200,7 @@ The [`content`](content) folder holds documentation copied from the original dis
 | [`TKKG_Identikit`](content/TKKG_Identikit) | Readme. |
 
 - `LIESMICH.TXT` is the readme, stored here as UTF-8 text. Most readmes list system requirements, installation steps and the historical Tivola support contacts. The readmes of TKKG 1 to 3 hide hints far below the main text.
+- `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The Mac readmes of TKKG 10 to 14 and the Identikit have the same content as their `LIESMICH.TXT` (TKKG 11 to 14 store it as a PDF). The discs of TKKG 4 to 9 have no Mac readme.
 - `HILFE.PDF` is the game's help file. For TKKG 4 to 9, it also covers system requirements and troubleshooting before the full solution. The solution gives away the whole case, so read it only if you are stuck.
 - `PRINT/PCT` holds the print pages as stored on the disc, in the Macintosh PICT format. `PRINT/PDF` holds PDF conversions of them. The PDF pages are larger than A4, so choose a scale-to-fit option when you print.
 - Open `INDEX.HTM` in `TKKG4/HTMLD` or `TKKG4/HTMLE` in a web browser to see the web pages.
