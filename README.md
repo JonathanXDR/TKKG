@@ -192,9 +192,11 @@ The [`content`](content) folder holds documentation copied from the original dis
 | [`TKKG2`](content/TKKG2) | Help file with the solution. Windows and Mac readmes, both with hidden hints. Printout: Sauerlich's special biscuits recipe (German and English). |
 | [`TKKG3`](content/TKKG3) | Help file with the solution. Windows and Mac readmes, both with hidden hints. |
 | [`TKKG4`](content/TKKG4) | Help file with the solution. Web pages from the in-game city archive computer (`HTMLD` German, `HTMLE` English). Printouts: piano basics, "Für Elise" sheet music, Oma Peper's nut cake recipe (German and English). |
-| [`TKKG5`](content/TKKG5), [`TKKG6`](content/TKKG6), [`TKKG9`](content/TKKG9) | Help file with the solution. |
-| [`TKKG7`](content/TKKG7) | Help file with the solution. The readme belongs to TKKG 6: the original TKKG 7 disc contains the same mix-up. |
+| [`TKKG5`](content/TKKG5) | Help file with the solution. |
+| [`TKKG6`](content/TKKG6) | Help file with the solution. The TKKG 6 readme is in `TKKG7`. |
+| [`TKKG7`](content/TKKG7) | Help file with the solution. The readme belongs to TKKG 6: the original TKKG 7 disc contains the same mix-up and has no readme of its own. |
 | [`TKKG8`](content/TKKG8) | Help file with the solution, readme. |
+| [`TKKG9`](content/TKKG9) | Help file with the solution. |
 | [`TKKG10`](content/TKKG10), [`TKKG11`](content/TKKG11), [`TKKG12`](content/TKKG12) | Readme. |
 | [`TKKG13`](content/TKKG13), [`TKKG14`](content/TKKG14) | Help file with solution hints, readme. |
 | [`TKKG_Identikit`](content/TKKG_Identikit) | Readme. |
