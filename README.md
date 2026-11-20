@@ -59,12 +59,12 @@ TKKG 6 is the exception: its Macintosh Repository copy is damaged, so get it fro
 The Macintosh Repository links use the site's page titles. TKKG 1 to 9 contain both the German and the English version on one disc.
 
 > [!WARNING]
-> Don't use the [TKKG 6 download from Macintosh Repository](https://www.macintoshrepository.org/3430-tkkg-6-the-forged-fifties). Its `TKKG6.iso` is about 13.8 MB too short, and several game files on it contain runs of zero bytes. In the game, the hotel reception shows noise bands, and other scenes can fail too. The intact `TKKG 06.iso` from the Internet Archive is 415,098,880 bytes, and `shasum "TKKG 06.iso"` prints `a22d2e8bfb1b2e848f067845cdde75efd5ac3dcc`.
+> Don't use the [TKKG 6 download from Macintosh Repository](https://www.macintoshrepository.org/3430-tkkg-6-the-forged-fifties). Its `TKKG6.iso` is incomplete: the file ends about 13.8 MB before the end of its own file system, and several game files on it contain runs of zero bytes. In the game, the hotel reception shows noise bands, and other scenes can fail too. The intact `TKKG 06.iso` from the Internet Archive is 415,098,880 bytes, and `shasum "TKKG 06.iso"` prints `a22d2e8bfb1b2e848f067845cdde75efd5ac3dcc`.
 
 To extract the disc images:
 
 1. Double-click each `.sit` archive, for example `tkkg1.cdr_.sit`. The first time, The Unarchiver asks where to extract archives: choose Extract to Same Folder. The Mac App Store version of The Unarchiver then asks for permission to use the folder: click Extract.
-2. Check that you got the disc image listed in the table. TKKG 10's image is named `TKKG.iso`. The TKKG 6 download from the Internet Archive is already a disc image and needs no extracting.
+2. Check that you got the disc image listed in the table. TKKG 10's image is named `TKKG.iso`. The TKKG 6 download from the Internet Archive is already a disc image and needs no extracting. [Checksums](docs/checksums.md) lists the SHA-1 of every archive and the size and SHA-1 of every disc image, so you can check that nothing is damaged.
 3. Move the images to a folder where they can stay. UTM remembers each image by its location, so after a move you have to choose it again.
 4. Delete the `.sit` archives after you have extracted all images.
 
@@ -158,7 +158,7 @@ If the VM window stays black apart from the menu bar clock after start-up, click
 - Check that the CD/DVD row in UTM shows the image name and not "(empty)".
 - Make sure you selected the extracted `.cdr` or `.iso` image and not the `.sit` archive.
 - If the desktop still shows the previous game's disc, eject it in Mac OS 9 and select the new image again.
-- If the extraction stopped early, the image is incomplete. Extract it again, or download it again.
+- If the extraction stopped early, the image is incomplete. Compare its size and SHA-1 with [Checksums](docs/checksums.md), then extract it again, or download it again.
 
 ### Colours look wrong or a game complains about the display
 
