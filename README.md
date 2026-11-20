@@ -281,11 +281,12 @@ The [`content`](content) folder holds documentation copied from the original dis
 | [`TKKG9`](content/TKKG9) | Help file with the solution. |
 | [`TKKG10`](content/TKKG10), [`TKKG11`](content/TKKG11), [`TKKG12`](content/TKKG12) | Readme. |
 | [`TKKG13`](content/TKKG13), [`TKKG14`](content/TKKG14) | Help file with solution hints, readme. |
-| [`TKKG_Identikit`](content/TKKG_Identikit) | Readme. |
+| [`TKKG_Identikit`](content/TKKG_Identikit) | Readme of the German edition (`LIESMICH.TXT`) and of the English edition (`README.TXT`, in English). |
 
 The folders contain these files:
 
 - `LIESMICH.TXT` is the readme, stored here as UTF-8 text. Most readmes list system requirements, installation steps and the historical Tivola support contacts. The readmes of TKKG 1 to 3 hide hints far below the main text. They come from earlier releases of these games: on the Internet Archive images, TKKG 1 has a shorter readme without the hints, and TKKG 2 and 3 have none. [Checksums](docs/checksums.md) lists the sources.
+- `README.TXT` in `TKKG_Identikit` is the readme of the English Identikit edition, also stored as UTF-8 text.
 - `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The Mac readmes of TKKG 10 to 14 and both Identikit editions have the same content as their Windows readme (TKKG 11 to 14 store it as a PDF). The discs of TKKG 4 to 9 have no Mac readme.
 - `HILFE.PDF` is the game's help file. For TKKG 1 to 9, it also covers system requirements and troubleshooting before the full solution. The solution gives away the whole case, so read it only if you are stuck.
 - `PRINT/PCT` holds the print pages as stored on the disc, in the Macintosh PICT format. `PRINT/PDF` holds PDF conversions of them. The PDF pages are larger than A4, so choose a scale-to-fit option when you print.
