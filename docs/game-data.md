@@ -1,6 +1,6 @@
 # Accessing game data
 
-These steps read files from the TKKG disc images on macOS without running the games, for example to look at the readme files or extract pictures and sound. They never change the contents of the images.
+This page shows how to read files from the TKKG disc images on macOS without running the games, for example to look at the readme files or extract pictures and sound. The commands never change the contents of the images.
 
 ## How the discs are built
 
@@ -13,7 +13,15 @@ Most game files, such as pictures, sound and other game data, appear in both par
 
 macOS 10.15 Catalina and later can't mount classic HFS volumes, so double-clicking an image only shows an error. Use macOS's own tools for the Windows part and [hfsutils](https://www.mars.org/home/rob/proj/hfs/) for the Mac part.
 
-The examples use `TKKG 1.cdr` in the current folder. Replace it with the path to your image, and keep the quotes when the name contains spaces.
+## Choose a disc image
+
+The commands below use the shell variable `image`, which holds the path of the disc image. This example selects TKKG 1 in the `TKKG` folder that the [setup guide](../README.md#setup) uses. For another disc, change the file name inside the quotes:
+
+```bash
+image="$HOME/TKKG/TKKG 1.cdr"
+```
+
+Run all following commands in the same Terminal window, because a new window doesn't know the variable. The file and folder names in the examples, such as `LIESMICH.TXT`, `TKKG 1` and `Lies mich`, come from the TKKG 1 disc. For another disc, take the names from the `tar -tf` or `hls` listing.
 
 ## Windows part (ISO 9660)
 
@@ -21,24 +29,30 @@ The examples use `TKKG 1.cdr` in the current folder. Replace it with the path to
 
 The `tar` command built into macOS reads ISO 9660 images. To list all files on the Windows part:
 
-```sh
-tar -tf "TKKG 1.cdr"
+```bash
+tar -tf "$image"
 ```
 
-To extract one file, or everything, into a new folder:
+To extract one file into a new folder `tkkg-pc` on your Desktop:
 
-```sh
-mkdir -p tkkg1
-tar -xf "TKKG 1.cdr" -C tkkg1 LIESMICH.TXT
-tar -xf "TKKG 1.cdr" -C tkkg1
+```bash
+mkdir -p ~/Desktop/tkkg-pc
+tar -xf "$image" -C ~/Desktop/tkkg-pc LIESMICH.TXT
 ```
 
-The extracted files are read-only, as on the CD.
+To extract every file of the Windows part:
 
-Text files on the Windows part use the Windows-1252 character set and Windows line endings. To convert one to UTF-8 with Unix line endings:
+```bash
+mkdir -p ~/Desktop/tkkg-pc
+tar -xf "$image" -C ~/Desktop/tkkg-pc
+```
 
-```sh
-iconv -f WINDOWS-1252 -t UTF-8 tkkg1/LIESMICH.TXT | tr -d '\r' > LIESMICH.txt
+The extracted files are read-only, as on the disc.
+
+Text files on the Windows part use the Windows-1252 character set and Windows line endings. This command saves a UTF-8 copy with Unix line endings next to the original:
+
+```bash
+iconv -f WINDOWS-1252 -t UTF-8 ~/Desktop/tkkg-pc/LIESMICH.TXT | tr -d '\r' > ~/Desktop/tkkg-pc/LIESMICH-utf8.txt
 ```
 
 The Unarchiver and `unar` can open these images too, but they only see the Windows part.
@@ -47,73 +61,131 @@ The Unarchiver and `unar` can open these images too, but they only see the Windo
 
 To browse the Windows part in the Finder, attach the image without mounting it, then mount it read-only. You don't need administrator rights, because you own the mount folder.
 
-```sh
+```bash
 mkdir -p ~/tkkg-iso
-device=$(hdiutil attach -readonly -nomount "TKKG 1.cdr" | head -n 1 | awk '{print $1}')
+device=$(hdiutil attach -readonly -nomount "$image" | head -n 1 | awk '{print $1}')
 mount -t cd9660 -o rdonly "$device" ~/tkkg-iso
 ```
 
-The first line of the `hdiutil` output names the whole disk device, for example `/dev/disk4`. Mount that device, because the ISO 9660 file system starts at the beginning of the image.
+The first line of the `hdiutil` output names the whole disk device, for example `/dev/disk4`. The commands mount that device, because the ISO 9660 file system starts at the beginning of the image.
+
+The Windows part now appears in the `tkkg-iso` folder in your home folder. This command opens it in the Finder:
+
+```bash
+open ~/tkkg-iso
+```
 
 When you're done, unmount it and detach the image:
 
-```sh
+```bash
 umount ~/tkkg-iso
 hdiutil detach "$device"
 ```
 
-If you opened a new Terminal window in the meantime, `$device` is empty. Run `hdiutil info` to find the `/dev/disk` name of the image and pass it to `hdiutil detach`.
+If you opened a new Terminal window in the meantime, the `device` variable is empty. This command lists the attached images with their device names:
 
-On macOS 27, `hdiutil attach` and `hdiutil detach` print a deprecation warning but still work. The new equivalents are `diskutil image attach --readOnly --noMount "TKKG 1.cdr"` and `diskutil eject "$device"`.
+```bash
+hdiutil info
+```
+
+Then detach the image. Replace `diskN` with the first `/dev/disk` name listed below the image's `image-path` line, for example `disk4`:
+
+```bash
+hdiutil detach /dev/diskN
+```
+
+On macOS 27, `hdiutil attach` and `hdiutil detach` print a deprecation warning but still work. To use the new `diskutil image` commands instead, mount the image with these commands:
+
+```bash
+mkdir -p ~/tkkg-iso
+device=$(diskutil image attach --readOnly --noMount "$image" | head -n 1 | awk '{print $1}')
+mount -t cd9660 -o rdonly "$device" ~/tkkg-iso
+```
+
+To unmount it and eject the image:
+
+```bash
+umount ~/tkkg-iso
+diskutil eject "$device"
+```
 
 ## Mac part (HFS)
 
 hfsutils reads and copies files from classic HFS volumes. Install it with [Homebrew](https://brew.sh/):
 
-```sh
+```bash
 brew install hfsutils
 ```
 
-Remove write permission from the image first. hfsutils then opens the volume read-only and reports it as locked.
+Remove write permission from the image, then mount it. Because the image is read-only, hfsutils opens the volume read-only and reports it as locked.
 
-```sh
-chmod a-w "TKKG 1.cdr"
-hmount "TKKG 1.cdr"
+```bash
+chmod a-w "$image"
+hmount "$image"
 ```
 
-hfsutils finds the HFS partition by itself and keeps the mounted volume as its current volume until you run `humount`. Paths use colons instead of slashes, and a path that starts with a colon is relative to the current folder.
+hfsutils finds the HFS partition by itself and keeps the mounted volume as its current volume until you release it. Paths use colons instead of slashes, and a path that starts with a colon is relative to the current folder. The following examples use the folder and file names of the TKKG 1 disc.
 
-To list the top folder, including invisible files, then list a game folder and change into it:
+To list the top folder, including invisible files:
 
-```sh
+```bash
 hls -la
+```
+
+To list the game folder and change into it:
+
+```bash
 hls -l ':TKKG 1'
 hcd ':TKKG 1'
 ```
 
+`hls -l` shows each file's type and creator codes. The type `APPL` marks programs, and `TEXT` marks text files.
+
+### Copy files
+
 To copy a file with its resource fork, as a MacBinary file:
 
-```sh
+```bash
 hcopy -m 'Lies mich' ~/Desktop/Lies-mich.bin
 ```
 
-To copy a text file with converted line endings and characters, then turn it into UTF-8:
+The Unarchiver or `unar` turns a MacBinary file back into a file with its resource fork. This command puts the file `Lies mich` on your Desktop:
 
-```sh
+```bash
+unar -o ~/Desktop ~/Desktop/Lies-mich.bin
+```
+
+`hcopy -t` converts Mac line endings and characters to Unix line endings and ISO 8859-1 (Latin-1). To copy a text file this way and turn it into UTF-8:
+
+```bash
 hcopy -t 'Lies mich' ~/Desktop/Lies-mich.txt
 iconv -f ISO-8859-1 -t UTF-8 ~/Desktop/Lies-mich.txt > ~/Desktop/Lies-mich-utf8.txt
 ```
 
-To release the image:
+To copy only the data fork, without any conversion, use `hcopy -r`. Mac text copied this way stays in the Mac OS Roman character set with Mac line endings, so convert it like this:
 
-```sh
+```bash
+hcopy -r 'Lies mich' ~/Desktop/Lies-mich.raw
+iconv -f MACINTOSH -t UTF-8 ~/Desktop/Lies-mich.raw | tr '\r' '\n' > ~/Desktop/Lies-mich-mac.txt
+```
+
+`hcopy` can't copy folders, but it copies several files at once into an existing folder. These commands copy all files of the current folder into `tkkg-mac` on your Desktop. `hcopy` replaces spaces in the file names with underscores.
+
+```bash
+mkdir -p ~/Desktop/tkkg-mac
+hcopy -r '*' ~/Desktop/tkkg-mac/
+```
+
+### Release the image
+
+When you're done, release the image:
+
+```bash
 humount
 ```
 
-- `hls -l` shows each file's type and creator codes. The type `APPL` marks programs, and `TEXT` marks text files.
-- `hcopy` can't copy folders, but it copies several files at once into an existing folder. For example, `hcopy -r '*' ~/Desktop/tkkg1-mac/` copies all files of the current folder. hcopy replaces spaces in file names with underscores.
-- `hcopy -m` keeps the resource fork by writing a MacBinary (`.bin`) file. `unar` or The Unarchiver turns it back into a file with its resource fork.
-- `hcopy -t` converts Mac line endings and characters to Unix line endings and ISO 8859-1 (Latin-1).
-- `hcopy -r` copies only the data fork, without any conversion. Mac text copied this way is in the Mac OS Roman character set: convert it with `iconv -f MACINTOSH -t UTF-8` and `tr '\r' '\n'`.
+If you want to make the image writable again, run this command. If you opened a new Terminal window in the meantime, set `image` again as in [Choose a disc image](#choose-a-disc-image) first.
 
-Run `chmod u+w "TKKG 1.cdr"` afterwards if you want the image writable again.
+```bash
+chmod u+w "$image"
+```
