@@ -33,7 +33,8 @@ Some steps also show a Terminal command as an alternative or as an optional chec
 
 ### 1. Install UTM
 
-Use the free download of UTM, not the paid Mac App Store version. The App Store version has the same features, but its updates can arrive later. In November 2026 it was still at 5.0.8, which lacks the Mac OS 9 fixes from 5.0.9. In 5.0.8, Restart can end on a black screen, start-up sometimes hangs at "Starting Up…", and sound can fail or crackle.
+> [!IMPORTANT]
+> Use the free download of UTM, not the paid Mac App Store version. The App Store version has the same features, but in November 2026 it was still at 5.0.8, which lacks the Mac OS 9 fixes from 5.0.9.
 
 1. Download UTM 5.0.9 (build 132) or later from [getutm.app](https://getutm.app/) or the [UTM releases on GitHub](https://github.com/utmapp/UTM/releases/latest).
 2. Open the DMG and drag UTM to your Applications folder. UTM > About UTM shows the version with the build number in brackets, for example 5.0.9 (132).
@@ -82,6 +83,9 @@ For TKKG 10 and the German Identikit, continue with these steps:
 
 According to the rules of Macintosh Repository, downloads through a proxy, a download manager or a VPN that changes your IP address can fail.
 
+> [!NOTE]
+> macOS shows an error when you double-click a disc image, because it can't read the classic Mac file system of these hybrid Mac and Windows discs. Mac OS 9 in UTM reads them without problems, so don't convert them.
+
 To download all Internet Archive images into the `TKKG` folder in Terminal instead (about 7 GB), run this command. It also creates the folder:
 
 ```bash
@@ -114,7 +118,7 @@ This command extracts the TKKG archives in your Downloads folder into the `TKKG`
 for f in ~/Downloads/[Tt][Kk][Kk][Gg]*.sit; do unar -o ~/TKKG "$f"; done
 ```
 
-macOS shows an error when you double-click an image, because it can't read the classic Mac file system of these hybrid Mac and Windows discs. Mac OS 9 in UTM reads them without problems, so don't convert them. Keep the images in the `TKKG` folder: UTM remembers each image by its location, so after a move you have to select it in UTM again.
+Keep the images in the `TKKG` folder: UTM remembers each image by its location, so after a move you have to select it in UTM again.
 
 Optional: check that every image is complete. This command prints the SHA-1 of every disc image in the `TKKG` folder:
 
@@ -195,7 +199,8 @@ Leave the disc inserted while you play, because the games load pictures and soun
 
 ### Quit and play again later
 
-Always quit the game from inside it before you shut down Mac OS 9 or stop the VM. If you stop the VM while a game is running, you can lose progress: TKKG 6, for example, lost all progress made since it was last quit from inside the game.
+> [!WARNING]
+> Always quit the game from inside it before you shut down Mac OS 9 or stop the VM. If you stop the VM while a game is running, you can lose progress: TKKG 6, for example, lost all progress made since it was last quit from inside the game.
 
 To finish, choose Special > Shut Down in Mac OS 9, then quit UTM.
 
@@ -228,7 +233,12 @@ UTM can only open files that you selected in UTM yourself. After you move or ren
 
 ### UTM reports "IDE unit 0 is in use"
 
-This happens after you add a drive to the VM. The UTM project built the preinstalled VM with an older UTM version that put each IDE drive on its own bus, so a newly added drive can claim a slot that is already taken. You don't need an extra drive, because the VM already has a CD/DVD drive. Open the VM settings, right-click the drive you added (the last IDE Drive under Drives), choose Delete, confirm with Delete and click Save.
+This happens after you add a drive to the VM. The UTM project built the preinstalled VM with an older UTM version that put each IDE drive on its own bus, so a newly added drive can claim a slot that is already taken. You don't need an extra drive, because the VM already has a CD/DVD drive.
+
+> [!CAUTION]
+> UTM permanently deletes the disk image of a drive you delete. Delete only the drive you added: deleting the VM's hard disk erases Mac OS 9 and all game progress.
+
+Open the VM settings, right-click the drive you added (the last IDE Drive under Drives), choose Delete, confirm with Delete and click Save.
 
 If you do need another drive, click Update Interface on every IDE drive that shows this button, then click Save. This puts all drives on the current layout with two drives per bus.
 
