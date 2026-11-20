@@ -1,12 +1,34 @@
 # Checksums
 
-Use these values to check that a download and its extracted disc image are complete and unchanged.
+Use these values to check that a download and its extracted disc image are complete and unchanged. If a value differs from the tables, the file is damaged or incomplete: download or extract it again.
 
-To get a file's SHA-1, open Terminal (Applications > Utilities), type `shasum` followed by a space, drag the file from the Finder onto the Terminal window and press Return. Terminal prints a 40-character value and then the file's path. For a large disc image this takes a few seconds. To see a file's size in bytes, select it in the Finder and choose File > Get Info. If a value differs from the table, download or extract the file again.
+## How to check
+
+Run these commands in Terminal (Applications > Utilities). The [setup guide](../README.md#setup) keeps the disc images in a folder named `TKKG` in your home folder. This command prints the SHA-1 of every disc image there:
+
+```bash
+find ~/TKKG -maxdepth 1 -type f \( -name '*.iso' -o -name '*.cdr' \) -exec shasum {} +
+```
+
+This command prints the SHA-1 of the downloaded archives in your Downloads folder, as long as you haven't deleted them:
+
+```bash
+shasum ~/Downloads/*.sit
+```
+
+Each output line starts with the 40-character SHA-1, followed by the file's path. For a large disc image, the calculation takes a few seconds.
+
+This command prints the size in bytes of every disc image, followed by its path:
+
+```bash
+find ~/TKKG -maxdepth 1 -type f \( -name '*.iso' -o -name '*.cdr' \) -exec stat -f '%z %N' {} +
+```
+
+Without Terminal, select an image in the Finder and choose File > Get Info to see its size in bytes.
 
 ## Game downloads
 
-The archive SHA-1 values are the ones Macintosh Repository lists on each download page. The TKKG 2 page names its archive `tkkg_2.cdr_.sit`, but Safari saves it as `tkkg2.cdr_.sit`. The disc image values were measured on the images that The Unarchiver extracts from those archives. TKKG 6 comes from the [Internet Archive item tkkg-06](https://archive.org/details/tkkg-06) as a plain disc image.
+The archive SHA-1 values are the ones Macintosh Repository lists on each download page. The TKKG 2 page names its archive `tkkg_2.cdr_.sit`, but Safari saves it as `tkkg2.cdr_.sit`. The disc image values come from the images that The Unarchiver extracts from those archives. TKKG 6 comes from the [Internet Archive item tkkg-06](https://archive.org/details/tkkg-06) as a plain disc image.
 
 | Game | Archive | Archive SHA-1 | Disc image | Image size (bytes) | Image SHA-1 |
 | --- | --- | --- | --- | --- | --- |
@@ -26,7 +48,7 @@ The archive SHA-1 values are the ones Macintosh Repository lists on each downloa
 | TKKG 14 | `TKKG14.iso_.sit` | `872bcedb2094ec74ca67f6e8da0a256024e40071` | `TKKG14.iso` | 519,098,368 | `f3827ef988129a9eda27898df7bb6e782fc77421` |
 | Identikit | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
 
-Don't use the TKKG 6 download from Macintosh Repository. Its archive `tkkg6.iso_.sit` (SHA-1 `86594f41e849da8781e53511be6790f7400d5805`) contains a damaged `TKKG6.iso` of 415,827,968 bytes (SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`). Its Mac file system ends at byte 429,620,224, so the last 13.8 MB are missing. The intact `TKKG 06.iso` is a different edition with a smaller file system, which is why it is shorter.
+Don't use the TKKG 6 download from Macintosh Repository. Its archive `tkkg6.iso_.sit` (SHA-1 `86594f41e849da8781e53511be6790f7400d5805`) contains a damaged `TKKG6.iso` of 415,827,968 bytes (SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`). Its Mac file system ends at byte 429,620,224, so the last 13.8 MB are missing, and several game files on it contain runs of zero bytes. The intact `TKKG 06.iso` is a different edition with a smaller file system, which is why it is shorter.
 
 ## Help files from later releases
 
