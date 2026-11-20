@@ -33,17 +33,21 @@ The `tar` command built into macOS reads ISO 9660 images. To list all files on t
 tar -tf "$image"
 ```
 
-To extract one file into a new folder `tkkg-pc` on your Desktop:
+To extract files, first create a folder `tkkg-pc` on your Desktop:
 
 ```bash
 mkdir -p ~/Desktop/tkkg-pc
+```
+
+Then extract one file, such as the readme:
+
+```bash
 tar -xf "$image" -C ~/Desktop/tkkg-pc LIESMICH.TXT
 ```
 
-To extract every file of the Windows part:
+Or extract every file of the Windows part:
 
 ```bash
-mkdir -p ~/Desktop/tkkg-pc
 tar -xf "$image" -C ~/Desktop/tkkg-pc
 ```
 
@@ -57,58 +61,6 @@ iconv -f WINDOWS-1252 -t UTF-8 ~/Desktop/tkkg-pc/LIESMICH.TXT | tr -d '\r' > ~/D
 
 The Unarchiver and `unar` can open these images too, but they only see the Windows part.
 
-### Mount the Windows part as a volume
-
-To browse the Windows part in the Finder, attach the image without mounting it, then mount it read-only. You don't need administrator rights, because you own the mount folder.
-
-```bash
-mkdir -p ~/tkkg-iso
-device=$(hdiutil attach -readonly -nomount "$image" | head -n 1 | awk '{print $1}')
-mount -t cd9660 -o rdonly "$device" ~/tkkg-iso
-```
-
-The first line of the `hdiutil` output names the whole disk device, for example `/dev/disk4`. The commands mount that device, because the ISO 9660 file system starts at the beginning of the image.
-
-The Windows part now appears in the `tkkg-iso` folder in your home folder. This command opens it in the Finder:
-
-```bash
-open ~/tkkg-iso
-```
-
-When you're done, unmount it and detach the image:
-
-```bash
-umount ~/tkkg-iso
-hdiutil detach "$device"
-```
-
-If you opened a new Terminal window in the meantime, the `device` variable is empty. This command lists the attached images with their device names:
-
-```bash
-hdiutil info
-```
-
-Then detach the image. Replace `diskN` with the first `/dev/disk` name listed below the image's `image-path` line, for example `disk4`:
-
-```bash
-hdiutil detach /dev/diskN
-```
-
-On macOS 27, `hdiutil attach` and `hdiutil detach` print a deprecation warning but still work. To use the new `diskutil image` commands instead, mount the image with these commands:
-
-```bash
-mkdir -p ~/tkkg-iso
-device=$(diskutil image attach --readOnly --noMount "$image" | head -n 1 | awk '{print $1}')
-mount -t cd9660 -o rdonly "$device" ~/tkkg-iso
-```
-
-To unmount it and eject the image:
-
-```bash
-umount ~/tkkg-iso
-diskutil eject "$device"
-```
-
 ## Mac part (HFS)
 
 hfsutils reads and copies files from classic HFS volumes. Install it with [Homebrew](https://brew.sh/):
@@ -117,10 +69,15 @@ hfsutils reads and copies files from classic HFS volumes. Install it with [Homeb
 brew install hfsutils
 ```
 
-Remove write permission from the image, then mount it. Because the image is read-only, hfsutils opens the volume read-only and reports it as locked.
+Remove write permission from the image, so that hfsutils opens it read-only:
 
 ```bash
 chmod a-w "$image"
+```
+
+Then mount it. hfsutils reports the volume as locked, because it's read-only.
+
+```bash
 hmount "$image"
 ```
 
@@ -132,14 +89,17 @@ To list the top folder, including invisible files:
 hls -la
 ```
 
-To list the game folder and change into it:
+To list the game folder:
 
 ```bash
 hls -l ':TKKG 1'
-hcd ':TKKG 1'
 ```
 
-`hls -l` shows each file's type and creator codes. The type `APPL` marks programs, and `TEXT` marks text files.
+`hls -l` shows each file's type and creator codes. The type `APPL` marks programs, and `TEXT` marks text files. To change into the game folder:
+
+```bash
+hcd ':TKKG 1'
+```
 
 ### Copy files
 
@@ -149,30 +109,39 @@ To copy a file with its resource fork, as a MacBinary file:
 hcopy -m 'Lies mich' ~/Desktop/Lies-mich.bin
 ```
 
-The Unarchiver or `unar` turns a MacBinary file back into a file with its resource fork. This command puts the file `Lies mich` on your Desktop:
+To turn a MacBinary file back into a file with its resource fork, open it with The Unarchiver, or install `unar` with Homebrew:
+
+```bash
+brew install unar
+```
+
+This command then puts the file `Lies mich` on your Desktop:
 
 ```bash
 unar -o ~/Desktop ~/Desktop/Lies-mich.bin
 ```
 
-`hcopy -t` converts Mac line endings and characters to Unix line endings and ISO 8859-1 (Latin-1). To copy a text file this way and turn it into UTF-8:
+To copy a text file, `hcopy -t` converts it to Unix line endings and the ISO 8859-1 (Latin-1) character set:
 
 ```bash
 hcopy -t 'Lies mich' ~/Desktop/Lies-mich.txt
+```
+
+This command saves a UTF-8 copy of it:
+
+```bash
 iconv -f ISO-8859-1 -t UTF-8 ~/Desktop/Lies-mich.txt > ~/Desktop/Lies-mich-utf8.txt
 ```
 
-To copy only the data fork, without any conversion, use `hcopy -r`. Mac text copied this way stays in the Mac OS Roman character set with Mac line endings, so convert it like this:
-
-```bash
-hcopy -r 'Lies mich' ~/Desktop/Lies-mich.raw
-iconv -f MACINTOSH -t UTF-8 ~/Desktop/Lies-mich.raw | tr '\r' '\n' > ~/Desktop/Lies-mich-mac.txt
-```
-
-`hcopy` can't copy folders, but it copies several files at once into an existing folder. These commands copy all files of the current folder into `tkkg-mac` on your Desktop. `hcopy` replaces spaces in the file names with underscores.
+`hcopy` can't copy folders, but it copies several files at once into an existing folder. To copy all files of the current folder, first create a folder `tkkg-mac` on your Desktop:
 
 ```bash
 mkdir -p ~/Desktop/tkkg-mac
+```
+
+Then copy the files into it. `-r` copies only the data fork, without conversion, so resource forks are lost. Use `hcopy -m` for files that need theirs. `hcopy` replaces spaces in the file names with underscores.
+
+```bash
 hcopy -r '*' ~/Desktop/tkkg-mac/
 ```
 
