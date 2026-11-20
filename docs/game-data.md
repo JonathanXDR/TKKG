@@ -18,7 +18,7 @@ macOS 10.15 Catalina and later can't mount classic HFS volumes, so double-clicki
 The commands below use the shell variable `image`, which holds the path of the disc image. This example selects TKKG 1 in the `TKKG` folder that the [setup guide](../README.md#setup) uses. For another disc, change the file name inside the quotes:
 
 ```bash
-image="$HOME/TKKG/TKKG 1.cdr"
+image="$HOME/TKKG/TKKG 01.iso"
 ```
 
 Run all following commands in the same Terminal window, because a new window doesn't know the variable. The file and folder names in the examples, such as `LIESMICH.TXT`, `TKKG 1` and `Lies mich`, come from the TKKG 1 disc. For another disc, take the names from the `tar -tf` or `hls` listing.

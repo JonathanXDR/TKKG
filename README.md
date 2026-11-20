@@ -12,11 +12,10 @@ The [`content`](content) folder holds the readme files, help files and printouts
 
 - [Requirements](#requirements)
 - [Setup](#setup)
-  1. [Install UTM and The Unarchiver](#1-install-utm-and-the-unarchiver)
+  1. [Install UTM](#1-install-utm)
   2. [Download the games](#2-download-the-games)
-  3. [Extract the disc images](#3-extract-the-disc-images)
-  4. [Add the Mac OS 9 virtual machine](#4-add-the-mac-os-9-virtual-machine)
-  5. [Start Mac OS 9 and set the display](#5-start-mac-os-9-and-set-the-display)
+  3. [Add the Mac OS 9 virtual machine](#3-add-the-mac-os-9-virtual-machine)
+  4. [Start Mac OS 9 and set the display](#4-start-mac-os-9-and-set-the-display)
 - [Playing](#playing)
 - [Troubleshooting](#troubleshooting)
 - [Original game documentation](#original-game-documentation)
@@ -25,107 +24,116 @@ The [`content`](content) folder holds the readme files, help files and printouts
 ## Requirements
 
 - A Mac with Apple silicon or an Intel processor, running macOS 12 Monterey or later (the minimum for UTM 5).
-- About 11 GB of free disk space for all 15 games: 7.1 GB for the disc images, 3.2 GB for the downloaded archives (you can delete them once the images are extracted) and 0.5 GB for Mac OS 9.
-- A free [Macintosh Repository](https://www.macintoshrepository.org/) account. Guests can only download files under 100 MB, and every game except the Identikit is larger.
+- About 8 GB of free disk space: 7.5 GB for the disc images of all games, including both Identikit editions, and 0.5 GB for Mac OS 9.
+- For TKKG 10 only, a free [Macintosh Repository](https://www.macintoshrepository.org/) account. Its archive is larger than 100 MB, the limit for guests.
 
 ## Setup
 
-You do these five steps once. To start and switch games afterwards, see [Playing](#playing).
+You do these four steps once. To start and switch games afterwards, see [Playing](#playing).
 
 Keep the disc images and the Mac OS 9 virtual machine (VM) together in a folder named `TKKG` in your home folder. iCloud Drive doesn't sync this folder, so macOS won't move the large files off your Mac to save space.
 
 Some steps also show a Terminal command as an alternative or as an optional check. To run one, open Terminal (Applications > Utilities), paste the command and press Return.
 
-### 1. Install UTM and The Unarchiver
+### 1. Install UTM
 
 Use the free download of UTM, not the paid Mac App Store version. The App Store version has the same features, but its updates can arrive later. In November 2026 it was still at 5.0.8, which lacks the Mac OS 9 fixes from 5.0.9. In 5.0.8, Restart can end on a black screen, start-up sometimes hangs at "Starting Up…", and sound can fail or crackle.
 
 1. Download UTM 5.0.9 (build 132) or later from [getutm.app](https://getutm.app/) or the [UTM releases on GitHub](https://github.com/utmapp/UTM/releases/latest).
 2. Open the DMG and drag UTM to your Applications folder. UTM > About UTM shows the version with the build number in brackets, for example 5.0.9 (132).
-3. Install [The Unarchiver](https://theunarchiver.com/), which is free and also available on the [Mac App Store](https://apps.apple.com/app/the-unarchiver/id425424353). All games except TKKG 6 come as StuffIt (`.sit`) archives, which the Archive Utility built into macOS can't open.
 
 The earlier 5.0.9 builds 130 and 131 can crash a VM at start-up on macOS 14 and later.
 
-If you use [Homebrew](https://brew.sh/), you can install both apps with one command instead:
+If you use [Homebrew](https://brew.sh/), you can install UTM with this command instead:
 
 ```bash
-brew install --cask utm the-unarchiver
+brew install --cask utm
 ```
 
 ### 2. Download the games
 
-> [!WARNING]
-> Get TKKG 6 from the Internet Archive, as linked in the table. The [TKKG 6 download from Macintosh Repository](https://www.macintoshrepository.org/3430-tkkg-6-the-forged-fifties) is damaged: in the game, the hotel reception shows noise bands, and other scenes can fail too. [Checksums](docs/checksums.md) has the details.
+Most games come from the Internet Archive as disc images that UTM uses directly. TKKG 10 and the German edition of the Identikit come from Macintosh Repository as StuffIt (`.sit`) archives: the Internet Archive has no complete copy of TKKG 10 and only the English edition of the Identikit.
 
-1. Sign in to Macintosh Repository.
-2. For each game you want, open its download page in the table and download the archive. Your browser saves it in your Downloads folder.
-3. For TKKG 6, download the disc image `TKKG 06.iso` from the Internet Archive page instead.
-
-Members can download up to 20 files a day. According to the site's rules, downloads through a proxy, a download manager or a VPN that changes your IP address can fail.
-
-| Game | German title | Download page | Disc image | Languages |
+| Game | German title | Download | Disc image | Languages |
 | --- | --- | --- | --- | --- |
-| TKKG 1 | Katjas Geheimnis | [TKKG 1: Jennifer Is Missing](https://www.macintoshrepository.org/5387-tkkg-1-jennifer-is-missing) | `TKKG 1.cdr` | German, English |
-| TKKG 2 | Tödliche Schokolade | [TKKG 2: Deadly Chocolate](https://www.macintoshrepository.org/4794-tkkg-2-deadly-chocolate) | `TKKG 2.cdr` | German, English |
-| TKKG 3 | Der Schatz der Maya | [TKKG 3: The Mystery of the Mayan Treasure](https://www.macintoshrepository.org/3393-tkkg-3-the-mystery-of-the-mayan-treasure) | `TKKG3.iso` | German, English |
-| TKKG 4 | Das Rätsel der Villa Drachenkralle | [TKKG 4: The Secret of Dragon Claw Manor](https://www.macintoshrepository.org/6174-tkkg-4-the-secret-of-dragon-claw-manor) | `TKKG4.cdr` | German, English |
-| TKKG 5 | Verrat an TKKG | [TKKG 5: TKKG Betrayed](https://www.macintoshrepository.org/4717-tkkg-5-tkkg-betrayed) | `TKKG5.iso` | German, English |
-| TKKG 6 | Der Fälscherbande auf der Spur | [TKKG 06 on the Internet Archive](https://archive.org/details/tkkg-06) | `TKKG 06.iso` | German, English |
-| TKKG 7 | Wer stoppt den Feuerteufel? | [TKKG 7: Fire!](https://www.macintoshrepository.org/4043-tkkg-7-fire-) | `TKKG7.iso` | German, English |
-| TKKG 8 | Das geheimnisvolle Testament | [TKKG 8: The Captain's Legacy](https://www.macintoshrepository.org/6187-tkkg-8-the-captain-s-legacy) | `TKKG8.iso` | German, English |
-| TKKG 9 | Voodoozauber | [TKKG 9: Voodoo Magic](https://www.macintoshrepository.org/5744-tkkg-9-voodoo-magic) | `TKKG9.iso` | German, English |
-| TKKG 10 | Panik im Internat | [TKKG 10: Panik im Internat](https://www.macintoshrepository.org/2997-tkkg-10-panik-im-internat) | `TKKG.iso` | German |
-| TKKG 11 | Film ab! | [TKKG 11: Film Ab!](https://www.macintoshrepository.org/3133-tkkg-11-film-ab-) | `TKKG11.iso` | German |
-| TKKG 12 | Alarm in der Geisterbahn | [TKKG 12: Alarm in der Geisterbahn](https://www.macintoshrepository.org/3884-tkkg-12-alarm-in-der-geisterbahn) | `TKKG12.iso` | German |
-| TKKG 13 | Zelle 13 | [TKKG 13: Zelle 13](https://www.macintoshrepository.org/5302-tkkg-13-zelle-13) | `TKKG13.iso` | German |
-| TKKG 14 | Gefährliche Ferien | [TKKG 14: Gefährliche Ferien](https://www.macintoshrepository.org/3506-tkkg-14-gefahrliche-ferien) | `TKKG14.iso` | German |
-| Identikit | Das Phantombild Programm | [TKKG: Identikit](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | German |
+| TKKG 1 | Katjas Geheimnis | [Internet Archive](https://archive.org/details/tkkg-01) | `TKKG 01.iso` | German, English |
+| TKKG 2 | Tödliche Schokolade | [Internet Archive](https://archive.org/details/tkkg-02) | `TKKG 02.iso` | German, English |
+| TKKG 3 | Der Schatz der Maya | [Internet Archive](https://archive.org/details/tkkg-03) | `TKKG 03.iso` | German, English |
+| TKKG 4 | Das Rätsel der Villa Drachenkralle | [Internet Archive](https://archive.org/details/tkkg-4_202605) | `TKKG 04.iso` | German, English |
+| TKKG 5 | Verrat an TKKG | [Internet Archive](https://archive.org/details/tkkg-05) | `TKKG 05.iso` | German, English |
+| TKKG 6 | Der Fälscherbande auf der Spur | [Internet Archive](https://archive.org/details/tkkg-06) | `TKKG 06.iso` | German, English |
+| TKKG 7 | Wer stoppt den Feuerteufel? | [Internet Archive](https://archive.org/details/tkkg-7_202201) | `TKKG7.iso` | German, English |
+| TKKG 8 | Das geheimnisvolle Testament | [Internet Archive](https://archive.org/details/tkkg-8_202201) | `TKKG8.iso` | German, English |
+| TKKG 9 | Voodoozauber | [Internet Archive](https://archive.org/details/tkkg-9_202201) | `TKKG9.iso` | German, English |
+| TKKG 10 | Panik im Internat | [Macintosh Repository](https://www.macintoshrepository.org/2997-tkkg-10-panik-im-internat) | `TKKG.iso` | German |
+| TKKG 11 | Film ab! | [Internet Archive](https://archive.org/details/tkkg-11) | `TKKG11.iso` | German |
+| TKKG 12 | Alarm in der Geisterbahn | [Internet Archive](https://archive.org/details/tkkg-12) | `TKKG12.iso` | German |
+| TKKG 13 | Zelle 13 | [Internet Archive](https://archive.org/details/tkkg-13) | `TKKG13.iso` | German |
+| TKKG 14 | Gefährliche Ferien | [Internet Archive](https://archive.org/details/tkkg-14) | `TKKG14.iso` | German |
+| Identikit (English) | Das Phantombild Programm | [Internet Archive](https://archive.org/details/Identikit) | `Identikit.iso` | English |
+| Identikit (German) | Das Phantombild Programm | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | German |
 
-The Macintosh Repository links use the site's page titles. TKKG 1 to 9 contain both the German and the English version on one disc.
-
-### 3. Extract the disc images
+TKKG 1 to 9 contain both the German and the English version on one disc.
 
 1. Create a folder named `TKKG` in your home folder: in the Finder, choose Go > Home, then File > New Folder.
-2. Double-click each `.sit` archive in your Downloads folder, for example `tkkg1.cdr_.sit`. The first time, The Unarchiver asks where to extract archives: choose Extract to Same Folder. The Mac App Store version of The Unarchiver then also asks for permission to use the folder: click Extract.
-3. Move the extracted disc images, listed in the table above, to the `TKKG` folder. TKKG 10's image is named `TKKG.iso`. Move `TKKG 06.iso` there as well, because it needs no extracting.
+2. For each game with an Internet Archive link in the table, open the link and click ISO IMAGE under Download Options. Move the downloaded disc image from your Downloads folder to the `TKKG` folder.
 
-To do steps 1 to 3 in Terminal instead, create the folder:
+For TKKG 10 and the German Identikit, continue with these steps:
+
+1. Install [The Unarchiver](https://theunarchiver.com/), which is free and also available on the [Mac App Store](https://apps.apple.com/app/the-unarchiver/id425424353). The Archive Utility built into macOS can't open StuffIt archives.
+2. Open the Macintosh Repository link in the table and download the archive. For TKKG 10, sign in first, because its archive is larger than 100 MB, the limit for guests.
+3. Double-click the archive. The first time, The Unarchiver asks where to extract archives: choose Extract to Same Folder. The Mac App Store version of The Unarchiver then also asks for permission to use the folder: click Extract.
+4. Move the extracted disc image to the `TKKG` folder.
+
+According to the rules of Macintosh Repository, downloads through a proxy, a download manager or a VPN that changes your IP address can fail.
+
+To download all Internet Archive images into the `TKKG` folder in Terminal instead (about 7 GB), run this command. It also creates the folder:
 
 ```bash
-mkdir -p ~/TKKG
+curl -L --fail --create-dirs --output-dir ~/TKKG \
+  -o "TKKG 01.iso" "https://archive.org/download/tkkg-01/TKKG%2001.iso" \
+  -o "TKKG 02.iso" "https://archive.org/download/tkkg-02/TKKG%2002.iso" \
+  -o "TKKG 03.iso" "https://archive.org/download/tkkg-03/TKKG%2003.iso" \
+  -o "TKKG 04.iso" "https://archive.org/download/tkkg-4_202605/TKKG%2004.iso" \
+  -o "TKKG 05.iso" "https://archive.org/download/tkkg-05/TKKG%2005.iso" \
+  -o "TKKG 06.iso" "https://archive.org/download/tkkg-06/TKKG%2006.iso" \
+  -o "TKKG7.iso" "https://archive.org/download/tkkg-7_202201/TKKG7.iso" \
+  -o "TKKG8.iso" "https://archive.org/download/tkkg-8_202201/TKKG8.iso" \
+  -o "TKKG9.iso" "https://archive.org/download/tkkg-9_202201/TKKG9.iso" \
+  -o "TKKG11.iso" "https://archive.org/download/tkkg-11/TKKG11.iso" \
+  -o "TKKG12.iso" "https://archive.org/download/tkkg-12/TKKG12.iso" \
+  -o "TKKG13.iso" "https://archive.org/download/tkkg-13/TKKG13.iso" \
+  -o "TKKG14.iso" "https://archive.org/download/tkkg-14/TKKG14.iso" \
+  -o "Identikit.iso" "https://archive.org/download/Identikit/Identikit.iso"
 ```
 
-Install the command-line tool `unar`. Homebrew has it ready-made for Apple silicon Macs with macOS 15 or later. On other Macs, Homebrew needs Xcode to build it.
+To extract the Macintosh Repository archives in Terminal instead of The Unarchiver, install the command-line tool `unar`. Homebrew has it ready-made for Apple silicon Macs with macOS 15 or later. On other Macs, Homebrew needs Xcode to build it.
 
 ```bash
 brew install unar
 ```
 
-Extract every TKKG archive in your Downloads folder into the `TKKG` folder:
+This command extracts the TKKG archives in your Downloads folder into the `TKKG` folder:
 
 ```bash
 for f in ~/Downloads/[Tt][Kk][Kk][Gg]*.sit; do unar -o ~/TKKG "$f"; done
 ```
 
-Move the TKKG 6 disc image there:
-
-```bash
-mv "$HOME/Downloads/TKKG 06.iso" ~/TKKG/
-```
-
 macOS shows an error when you double-click an image, because it can't read the classic Mac file system of these hybrid Mac and Windows discs. Mac OS 9 in UTM reads them without problems, so don't convert them. Keep the images in the `TKKG` folder: UTM remembers each image by its location, so after a move you have to select it in UTM again.
 
-Optional, for both ways: before you delete the archives, check that every image is complete. This command prints the SHA-1 of all images in the `TKKG` folder. Compare the values with [Checksums](docs/checksums.md). Without Terminal, compare each image's size in File > Get Info instead. If an image doesn't match, extract its archive again, or download it again:
+Optional: check that every image is complete. This command prints the SHA-1 of every disc image in the `TKKG` folder:
 
 ```bash
-find ~/TKKG -maxdepth 1 -type f \( -name '*.iso' -o -name '*.cdr' \) -exec shasum {} +
+shasum ~/TKKG/*.iso
 ```
+
+Compare the values with [Checksums](docs/checksums.md). Without Terminal, compare each image's size in bytes in the Finder (File > Get Info) instead. If an image doesn't match, download it again. For TKKG 10 and the German Identikit, try extracting the archive again first.
 
 Once all images are in the `TKKG` folder, you can delete the `.sit` archives.
 
-### 4. Add the Mac OS 9 virtual machine
+### 3. Add the Mac OS 9 virtual machine
 
-This guide uses the preinstalled Mac OS 9.2.1 VM that the UTM project published for its former gallery. All 15 discs ran in it with the settings below. UTM no longer updates this VM, but it still works.
+This guide uses the preinstalled Mac OS 9.2.1 VM that the UTM project published for its former gallery. Every game ran in it with the settings below, except the English Identikit, which hasn't been tested yet. UTM no longer updates this VM, but it still works.
 
 Download [`mac-os-9.2.1-utm.zip`](https://github.com/utmapp/vm-downloads/releases/download/mac-os-9.2.1/mac-os-9.2.1-utm.zip) (141 MB) from the UTM project's [vm-downloads releases](https://github.com/utmapp/vm-downloads/releases/tag/mac-os-9.2.1).
 
@@ -147,7 +155,7 @@ Then add the VM to UTM:
 
 On the default G4 processor, TKKG 12 crashed right after its intro in testing. Leave the memory at 512 MB, because more memory doesn't make the emulation faster.
 
-### 5. Start Mac OS 9 and set the display
+### 4. Start Mac OS 9 and set the display
 
 1. Select the VM in UTM and click the Play button. Within a minute or two, the Mac OS 9 desktop appears, with the hard disk "untitled" in the top right corner.
 2. On the first start, the Mac OS Setup Assistant opens, and possibly the AirPort Setup Assistant. The games need neither, so quit them with Command-Q.
@@ -166,7 +174,7 @@ To shut down the VM, choose Special > Shut Down in Mac OS 9. The Special menu be
 1. If another game's disc is on the Mac OS 9 desktop, eject it: drag its icon to the Trash in the bottom right corner of the desktop, or select it and press Command-E.
 2. In UTM's main window, select the VM, click CD/DVD in its details, choose Browse… and select the game's disc image from the `TKKG` folder. This works while the VM is running or stopped. In a running VM's window, the Drives toolbar button offers the same: choose the CD/DVD drive, then Change.
 3. In Mac OS 9, the disc appears on the desktop, for example as "TKKG 1". If its window doesn't open by itself, double-click the disc icon.
-4. The first time you play TKKG 1 to 10 or the Identikit, drag the game folder named in the table below from the disc window onto the "untitled" hard disk icon. Ignore the empty folder "<- auf die Festplatte kopieren" ("copy to the hard disk"), whose name is an arrow that points at the game folder. If the Finder asks whether to replace an existing item, click Cancel to keep the copy you already have. TKKG 11 to 14 run from the disc and need no copying.
+4. The first time you play TKKG 1 to 10 or the Identikit, drag the game folder named in the table below from the disc window onto the "untitled" hard disk icon. Ignore the empty folder whose name is an arrow, "<- auf die Festplatte kopieren" or "<- Copy on the hard drive...": it only points at the game folder. If the Finder asks whether to replace an existing item, click Cancel to keep the copy you already have. TKKG 11 to 14 run from the disc and need no copying.
 5. For TKKG 6 only: open the Apple menu > Control Panels > Monitors and choose 256 under Color Depth. TKKG 6 doesn't switch by itself.
 6. Double-click the start icon from the table: in the copied folder on the hard disk for TKKG 1 to 10 and the Identikit, or in the disc window for TKKG 11 to 14.
 
@@ -178,9 +186,10 @@ To shut down the VM, choose Special > Shut Down in Mac OS 9. The Special menu be
 | TKKG 7 to 9 | TKKG 7, TKKG 8, TKKG 9 | TKKG-Start | Thousands |
 | TKKG 10 | TKKG10 | TKKG10 | Thousands, 800 × 600 or more |
 | TKKG 11 to 14 | None (they start from the disc) | TKKG11, TKKG12, TKKG13, TKKG14 | Thousands, 800 × 600 or more |
-| Identikit | Phantombild | Phantombild Start | Thousands |
+| Identikit (English) | Identikit | Identikit Start | Thousands |
+| Identikit (German) | Phantombild | Phantombild Start | Thousands |
 
-The table shows the names on the discs. The original readme files sometimes spell them differently. TKKG 7 to 14 and the Identikit ran at Thousands in testing. Thousands is the Mac OS name for 32,768 colours, which most of their readme and help files ask for.
+The table shows the names on the discs. The original readme files sometimes spell them differently. TKKG 7 to 14 and the German Identikit ran at Thousands in testing. Thousands is the Mac OS name for 32,768 colours, which most readme and help files of these games ask for, including the English Identikit's readme.
 
 Leave the disc inserted while you play, because the games load pictures and sound from it. If a game opens with a TKKG membership card, click Neues Mitglied (new member) to start a new game. Next time, click Mitglied (member) and choose your name to continue where you left off.
 
@@ -215,9 +224,9 @@ If the VM window stays black apart from the menu bar clock after start-up, click
 ### The disc doesn't appear in Mac OS 9
 
 - Check that the CD/DVD row in UTM shows the image name and not "(empty)".
-- Make sure you selected the extracted `.cdr` or `.iso` image and not the `.sit` archive.
+- Make sure you selected the `.iso` disc image and not a `.sit` archive.
 - If the desktop still shows the previous game's disc, eject it in Mac OS 9 and select the new image again.
-- If the extraction stopped early, the image is incomplete. Compare its size and SHA-1 with [Checksums](docs/checksums.md). If either differs, extract it again, or download it again.
+- If a download or extraction stopped early, the image is incomplete. Compare its size and SHA-1 with [Checksums](docs/checksums.md). If either differs, download it again.
 
 ### UTM reports "Operation not permitted" or "Failed to access drive image path"
 
@@ -231,7 +240,7 @@ If you do need another drive, click Update Interface on every IDE drive that sho
 
 ### TKKG 12 quits after the intro with "an error of type 3"
 
-The VM uses the default G4 processor. Shut down Mac OS 9 and set System > CPU to `g3` in the VM settings, as described in [Add the Mac OS 9 virtual machine](#4-add-the-mac-os-9-virtual-machine).
+The VM uses the default G4 processor. Shut down Mac OS 9 and set System > CPU to `g3` in the VM settings, as described in [Add the Mac OS 9 virtual machine](#3-add-the-mac-os-9-virtual-machine).
 
 ### Colours look wrong or a game complains about the display
 
@@ -239,13 +248,13 @@ Set the Monitors control panel to the values in the table under [Start a game](#
 
 ### TKKG 6 shows noise bands in the hotel reception
 
-You are using the damaged image from Macintosh Repository. Replace it with the intact copy from the Internet Archive linked in [Download the games](#2-download-the-games).
+You are using a damaged copy of the disc, such as the one on Macintosh Repository. Download TKKG 6 from the Internet Archive as linked in [Download the games](#2-download-the-games), and compare its SHA-1 with [Checksums](docs/checksums.md).
 
 ### Mac OS 9 can freeze when a game prints
 
 Mac OS 9 froze when TKKG 6 printed while no printer was set up. If this happens, click Stop in UTM and confirm that you want to force stop the VM. You can lose progress made since you last quit the game from inside it. At the next start, Disk First Aid checks the hard disk. Let it finish.
 
-To prevent the freeze, set up the file printer described in step 5 of [Start Mac OS 9 and set the display](#5-start-mac-os-9-and-set-the-display). The printouts of TKKG 1, 2 and 4 are also in the [`content`](content) folder as PDFs.
+To prevent the freeze, set up the file printer described in step 5 of [Start Mac OS 9 and set the display](#4-start-mac-os-9-and-set-the-display). The printouts of TKKG 1, 2 and 4 are also in the [`content`](content) folder as PDFs.
 
 ### Graphics errors in the final game of TKKG 14
 
@@ -276,15 +285,15 @@ The [`content`](content) folder holds documentation copied from the original dis
 
 The folders contain these files:
 
-- `LIESMICH.TXT` is the readme, stored here as UTF-8 text. Most readmes list system requirements, installation steps and the historical Tivola support contacts. The readmes of TKKG 1 to 3 hide hints far below the main text.
-- `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The Mac readmes of TKKG 10 to 14 and the Identikit have the same content as their `LIESMICH.TXT` (TKKG 11 to 14 store it as a PDF). The discs of TKKG 4 to 9 have no Mac readme.
-- `HILFE.PDF` is the game's help file. For TKKG 1 to 9, it also covers system requirements and troubleshooting before the full solution. The solution gives away the whole case, so read it only if you are stuck. The Macintosh Repository discs of TKKG 1 to 3 have no help file, so the help files of these games come from later releases, listed in [Checksums](docs/checksums.md).
+- `LIESMICH.TXT` is the readme, stored here as UTF-8 text. Most readmes list system requirements, installation steps and the historical Tivola support contacts. The readmes of TKKG 1 to 3 hide hints far below the main text. They come from earlier releases of these games: on the Internet Archive images, TKKG 1 has a shorter readme without the hints, and TKKG 2 and 3 have none. [Checksums](docs/checksums.md) lists the sources.
+- `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The Mac readmes of TKKG 10 to 14 and both Identikit editions have the same content as their Windows readme (TKKG 11 to 14 store it as a PDF). The discs of TKKG 4 to 9 have no Mac readme.
+- `HILFE.PDF` is the game's help file. For TKKG 1 to 9, it also covers system requirements and troubleshooting before the full solution. The solution gives away the whole case, so read it only if you are stuck.
 - `PRINT/PCT` holds the print pages as stored on the disc, in the Macintosh PICT format. `PRINT/PDF` holds PDF conversions of them. The PDF pages are larger than A4, so choose a scale-to-fit option when you print.
 - `HTMLD` and `HTMLE` in `TKKG4` hold the web pages. Open their `INDEX.HTM` in a web browser. The pages refer to their files in lowercase, so they only work on a case-insensitive file system, which is the macOS default.
 
 ## Advanced topics
 
-- [Checksums](docs/checksums.md): the SHA-1 of every archive, the size and SHA-1 of every disc image, and the sources of the TKKG 1 to 3 help files.
+- [Checksums](docs/checksums.md): the size and SHA-1 of every disc image, the two Macintosh Repository archives, known damaged copies, and the sources of the TKKG 1 to 3 readmes.
 - [Accessing game data](docs/game-data.md): how to read files from the disc images on macOS without running the games, for example to extract pictures or sound.
 
 ### Install Mac OS 9 yourself

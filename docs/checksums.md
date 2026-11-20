@@ -1,19 +1,13 @@
 # Checksums
 
-Use these values to check that a download and its extracted disc image are complete and unchanged. If a value differs from the tables, the file is damaged or incomplete: download or extract it again.
+Use these values to check that a downloaded disc image is complete and unchanged. If an image from the sources in the [setup guide](../README.md#2-download-the-games) has different values, it's damaged or incomplete: download it again. Images from other sources have different values, even when they're intact.
 
 ## How to check
 
-Run these commands in Terminal (Applications > Utilities). The [setup guide](../README.md#setup) keeps the disc images in a folder named `TKKG` in your home folder. This command prints the SHA-1 of every disc image there:
+Run these commands in Terminal (Applications > Utilities). The setup guide keeps the disc images in a folder named `TKKG` in your home folder. This command prints the SHA-1 of every disc image there:
 
 ```bash
-find ~/TKKG -maxdepth 1 -type f \( -name '*.iso' -o -name '*.cdr' \) -exec shasum {} +
-```
-
-This command prints the SHA-1 of the downloaded archives in your Downloads folder, as long as you haven't deleted them:
-
-```bash
-shasum ~/Downloads/*.sit
+shasum ~/TKKG/*.iso
 ```
 
 Each output line starts with the 40-character SHA-1, followed by the file's path. For a large disc image, the calculation takes a few seconds.
@@ -21,41 +15,63 @@ Each output line starts with the 40-character SHA-1, followed by the file's path
 This command prints the size in bytes of every disc image, followed by its path:
 
 ```bash
-find ~/TKKG -maxdepth 1 -type f \( -name '*.iso' -o -name '*.cdr' \) -exec stat -f '%z %N' {} +
+stat -f '%z %N' ~/TKKG/*.iso
 ```
 
 Without Terminal, select an image in the Finder and choose File > Get Info to see its size in bytes.
 
-## Game downloads
+## Disc images
 
-The archive SHA-1 values are the ones Macintosh Repository lists on each download page. The TKKG 2 page names its archive `tkkg_2.cdr_.sit`, but Safari saves it as `tkkg2.cdr_.sit`. The disc image values come from the images that The Unarchiver extracts from those archives. TKKG 6 comes from the [Internet Archive item tkkg-06](https://archive.org/details/tkkg-06) as a plain disc image.
+The Internet Archive lists the same size and SHA-1 for each of its files. TKKG 10 and the German Identikit come from Macintosh Repository as StuffIt archives, and their values belong to the disc images that The Unarchiver extracts.
 
-| Game | Archive | Archive SHA-1 | Disc image | Image size (bytes) | Image SHA-1 |
-| --- | --- | --- | --- | --- | --- |
-| TKKG 1 | `tkkg1.cdr_.sit` | `8ad5d14414b0acb1e44568e57f905749dbc07834` | `TKKG 1.cdr` | 303,118,336 | `e4e150291e8c109bbf9f8fa6581abdee0502562b` |
-| TKKG 2 | `tkkg2.cdr_.sit` | `48bc804c16114d9a5ab825270f7a55ec3996f63a` | `TKKG 2.cdr` | 373,301,248 | `7e913a188c7b2e5cb513fcff320dc32f3cd426b0` |
-| TKKG 3 | `tkkg3.iso_.sit` | `63d968629f335cbdc52e59fdf4d3e1ea820e9692` | `TKKG3.iso` | 709,691,392 | `ee0a8a30963d3b39f51434a920794dd33ae99641` |
-| TKKG 4 | `tkkg4.cdr_.sit` | `babb772959417328fa91e60aba2f808174d9ae79` | `TKKG4.cdr` | 705,464,320 | `cff31b87738cadfd7e4e593e8e74742833538873` |
-| TKKG 5 | `tkkg5.iso_.sit` | `b0bd5e2fe25acf04e3cec867e8511ccaf250ea44` | `TKKG5.iso` | 373,704,704 | `9b9b3285a65b147b3f7545e8baefc4c1323ab356` |
-| TKKG 6 | none (Internet Archive) | none | `TKKG 06.iso` | 415,098,880 | `a22d2e8bfb1b2e848f067845cdde75efd5ac3dcc` |
-| TKKG 7 | `tkkg7.iso_.sit` | `abe2e3226c332c3111c666d0221670fef177e4f9` | `TKKG7.iso` | 537,102,336 | `babca4878e795612d17b7afbdc87866cc6974449` |
-| TKKG 8 | `tkkg8.iso_.sit` | `73923182e7d022f7f89aef5fbd624ddfe182d1ff` | `TKKG8.iso` | 575,387,648 | `10d662bbada9222361331c17ad935b7b9726d2d7` |
-| TKKG 9 | `tkkg9.iso_.sit` | `bb1c3b07f8af2044b2fd2823e87a18f9acf577e5` | `TKKG9.iso` | 529,373,184 | `bbf0a3cbecacf35a4cb39d7899e94ee03c28d56e` |
-| TKKG 10 | `TKKG10.iso_.sit` | `88687b0d85353a9a86cb89cf0349ed43b086e205` | `TKKG.iso` | 392,865,792 | `21f46144acbc41bd2e3d25941ab6f0515969a61b` |
-| TKKG 11 | `TKKG11.iso_.sit` | `07564f7bc3a12a4682d17f5b2dff93263f21f8ad` | `TKKG11.iso` | 513,208,320 | `f73b452ba77e0125eb9684e44f05ccc25dd95ea3` |
-| TKKG 12 | `TKKG12.iso_.sit` | `aed4566a51a4fe403bd45a76ff7b69d7dad8a4df` | `TKKG12.iso` | 480,014,336 | `a8202c4b0693c0ed9adef7880f4b51ec605e207d` |
-| TKKG 13 | `TKKG13.iso_.sit` | `cfe6981a76da4932a9b72ce0b92e6c166ecc53e9` | `TKKG13.iso` | 617,869,312 | `d2b0b4a167f7afb4ab78ca1bcad030212713faa9` |
-| TKKG 14 | `TKKG14.iso_.sit` | `872bcedb2094ec74ca67f6e8da0a256024e40071` | `TKKG14.iso` | 519,098,368 | `f3827ef988129a9eda27898df7bb6e782fc77421` |
-| Identikit | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
+The games were tested with these images, with two exceptions. The English Identikit hasn't been tested. TKKG 11 was tested with the image `TKKG11.iso` from [Macintosh Repository](https://www.macintoshrepository.org/3133-tkkg-11-film-ab-) (513,208,320 bytes, SHA-1 `f73b452ba77e0125eb9684e44f05ccc25dd95ea3`). Its Mac files are identical to those on the Internet Archive image, and the two images differ only in parts that Mac OS 9 doesn't read.
 
-Don't use the TKKG 6 download from Macintosh Repository. Its archive `tkkg6.iso_.sit` (SHA-1 `86594f41e849da8781e53511be6790f7400d5805`) contains a damaged `TKKG6.iso` of 415,827,968 bytes (SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`). Its Mac file system ends at byte 429,620,224, so the last 13.8 MB are missing, and several game files on it contain runs of zero bytes. The intact `TKKG 06.iso` is a different edition with a smaller file system, which is why it is shorter.
-
-## Help files from later releases
-
-The Macintosh Repository discs of TKKG 1 to 3 contain no help file. The help files of these three games in `content` come from later releases on the Internet Archive and are identical to the files on those discs.
-
-| File | File SHA-1 | Source | Source disc image | Image SHA-1 |
+| Game | Source | Disc image | Size (bytes) | SHA-1 |
 | --- | --- | --- | --- | --- |
-| [`content/TKKG1/HILFE.PDF`](../content/TKKG1/HILFE.PDF) | `c3822059d139562d9a70ac5fb5f0cb91112e09ba` | [tkkg-01](https://archive.org/details/tkkg-01) (2002 release) | `TKKG 01.iso` | `714f76495fa6e836da8503958b175ab8c0def656` |
-| [`content/TKKG2/HILFE.PDF`](../content/TKKG2/HILFE.PDF) | `e34eea198ac74700fab926fb9c6def6016d57d0c` | [tkkg-02](https://archive.org/details/tkkg-02) (2000 release) | `TKKG 02.iso` | `dc29de0429091c6afdc0603f3a4d8d8390284c4c` |
-| [`content/TKKG3/HILFE.PDF`](../content/TKKG3/HILFE.PDF) | `03a25d016904ca8b32336c1942ef397b5797e6d9` | [tkkg-03](https://archive.org/details/tkkg-03) (1999 release) | `TKKG 03.iso` | `5894f7999e7553b162019a31027e0bf588255376` |
+| TKKG 1 | [tkkg-01](https://archive.org/details/tkkg-01) | `TKKG 01.iso` | 319,299,584 | `714f76495fa6e836da8503958b175ab8c0def656` |
+| TKKG 2 | [tkkg-02](https://archive.org/details/tkkg-02) | `TKKG 02.iso` | 394,524,672 | `dc29de0429091c6afdc0603f3a4d8d8390284c4c` |
+| TKKG 3 | [tkkg-03](https://archive.org/details/tkkg-03) | `TKKG 03.iso` | 701,933,568 | `5894f7999e7553b162019a31027e0bf588255376` |
+| TKKG 4 | [tkkg-4_202605](https://archive.org/details/tkkg-4_202605) | `TKKG 04.iso` | 705,468,416 | `8a784ec666c9de15ed2e7fb086afe0c8a62ff391` |
+| TKKG 5 | [tkkg-05](https://archive.org/details/tkkg-05) | `TKKG 05.iso` | 706,058,240 | `2d808e93247c42e219ea806ff9af69a1141042ab` |
+| TKKG 6 | [tkkg-06](https://archive.org/details/tkkg-06) | `TKKG 06.iso` | 415,098,880 | `a22d2e8bfb1b2e848f067845cdde75efd5ac3dcc` |
+| TKKG 7 | [tkkg-7_202201](https://archive.org/details/tkkg-7_202201) | `TKKG7.iso` | 537,102,336 | `babca4878e795612d17b7afbdc87866cc6974449` |
+| TKKG 8 | [tkkg-8_202201](https://archive.org/details/tkkg-8_202201) | `TKKG8.iso` | 575,387,648 | `10d662bbada9222361331c17ad935b7b9726d2d7` |
+| TKKG 9 | [tkkg-9_202201](https://archive.org/details/tkkg-9_202201) | `TKKG9.iso` | 529,373,184 | `bbf0a3cbecacf35a4cb39d7899e94ee03c28d56e` |
+| TKKG 10 | [Macintosh Repository](https://www.macintoshrepository.org/2997-tkkg-10-panik-im-internat) | `TKKG.iso` | 392,865,792 | `21f46144acbc41bd2e3d25941ab6f0515969a61b` |
+| TKKG 11 | [tkkg-11](https://archive.org/details/tkkg-11) | `TKKG11.iso` | 512,897,024 | `7a860358d966dac9a2003b6ccec5e3832dd25a84` |
+| TKKG 12 | [tkkg-12](https://archive.org/details/tkkg-12) | `TKKG12.iso` | 480,014,336 | `a8202c4b0693c0ed9adef7880f4b51ec605e207d` |
+| TKKG 13 | [tkkg-13](https://archive.org/details/tkkg-13) | `TKKG13.iso` | 617,869,312 | `d2b0b4a167f7afb4ab78ca1bcad030212713faa9` |
+| TKKG 14 | [tkkg-14](https://archive.org/details/tkkg-14) | `TKKG14.iso` | 519,098,368 | `f3827ef988129a9eda27898df7bb6e782fc77421` |
+| Identikit (English) | [Identikit](https://archive.org/details/Identikit) | `Identikit.iso` | 49,698,816 | `eda168d745314ec2781f92e477c675bd2d5f4215` |
+| Identikit (German) | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
+
+## Macintosh Repository archives
+
+These are the SHA-1 values that Macintosh Repository lists for its two downloads. If you still have the archives in your Downloads folder, this command prints their SHA-1:
+
+```bash
+shasum ~/Downloads/*.sit
+```
+
+| Game | Archive | SHA-1 |
+| --- | --- | --- |
+| TKKG 10 | `TKKG10.iso_.sit` | `88687b0d85353a9a86cb89cf0349ed43b086e205` |
+| Identikit (German) | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` |
+
+## Incomplete copies
+
+Don't use these copies:
+
+- The TKKG 10 image on the Internet Archive (items `tkkg-10` and `tkkg-10.-panik.im.-internat.-setup`): `TKKG 10.iso`, 365,789,184 bytes, SHA-1 `80e0afd3878e6e3ab52f5f7aaa1519680904c960`. Its file systems end at byte 392,598,528, so the last 26.8 MB are missing.
+- The TKKG 6 download on Macintosh Repository: the archive `tkkg6.iso_.sit` (SHA-1 `86594f41e849da8781e53511be6790f7400d5805`) contains `TKKG6.iso`, 415,827,968 bytes, SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`. Its Mac file system ends at byte 429,620,224, so the last 13.8 MB are missing, and several game files on it contain runs of zero bytes.
+- The TKKG 6 item [`tkkg-6`](https://archive.org/details/tkkg-6) on the Internet Archive (not `tkkg-06`): `TKKG6.iso`, 388,743,168 bytes, SHA-1 `b439f3332533ba2bc540ac2f7e3c56f08c769737`. It contains only the Windows part of the disc, so it has no Mac version of the game.
+
+## Readmes from earlier releases
+
+The Internet Archive images of TKKG 1 to 3 are later releases. TKKG 1 has a shorter readme without the hidden hints, and TKKG 2 and 3 have no readme. These readmes in `content` come from the earlier releases on Macintosh Repository. The Mac readme of TKKG 1 is on both releases.
+
+| Files | Source release | Disc image | SHA-1 |
+| --- | --- | --- | --- |
+| [`content/TKKG1/LIESMICH.TXT`](../content/TKKG1/LIESMICH.TXT) | [TKKG 1 on Macintosh Repository](https://www.macintoshrepository.org/5387-tkkg-1-jennifer-is-missing) | `TKKG 1.cdr` | `e4e150291e8c109bbf9f8fa6581abdee0502562b` |
+| [`content/TKKG2/LIESMICH.TXT`](../content/TKKG2/LIESMICH.TXT), [`LIESMICH_MAC.TXT`](../content/TKKG2/LIESMICH_MAC.TXT) | [TKKG 2 on Macintosh Repository](https://www.macintoshrepository.org/4794-tkkg-2-deadly-chocolate) | `TKKG 2.cdr` | `7e913a188c7b2e5cb513fcff320dc32f3cd426b0` |
+| [`content/TKKG3/LIESMICH.TXT`](../content/TKKG3/LIESMICH.TXT), [`LIESMICH_MAC.TXT`](../content/TKKG3/LIESMICH_MAC.TXT) | [TKKG 3 on Macintosh Repository](https://www.macintoshrepository.org/3393-tkkg-3-the-mystery-of-the-mayan-treasure) | `TKKG3.iso` | `ee0a8a30963d3b39f51434a920794dd33ae99641` |
