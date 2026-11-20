@@ -1,60 +1,55 @@
 # Checksums
 
-Use these values to check that a downloaded disc image is complete and unchanged. If an image from the sources in the [setup guide](../README.md#2-download-the-games) has different values, it's damaged or incomplete, so download it again. Images from other sources have different values, even when they're intact.
+Use these values to check that a download is complete and unchanged. If an image from the links in the [setup guide](../README.md#2-download-the-games) has different values, download it again. Images from other sources can have different values even when they're intact.
 
 ## How to check
 
-Run these commands in Terminal, which is in Applications > Utilities. The setup guide keeps the disc images in a folder named `TKKG` in your home folder. This command prints the SHA-1 of every disc image there:
+In Terminal, this command prints the SHA-1 of every disc image in the `TKKG` folder:
 
 ```bash
 shasum ~/TKKG/*.iso
 ```
 
-Each output line starts with the 40-character SHA-1, followed by the file's path. For a large disc image, the calculation takes a few seconds.
-
-This command prints the size in bytes of every disc image, followed by its path:
+This command prints the size of every disc image in bytes:
 
 ```bash
 stat -f '%z %N' ~/TKKG/*.iso
 ```
 
-Without Terminal, select an image in the Finder and choose File > Get Info to see its size in bytes.
+In the Finder, File > Get Info also shows the size in bytes.
 
 ## Disc images
 
-The Internet Archive lists the same size and SHA-1 for each of its files. TKKG 10 and the German Identikit come from Macintosh Repository as StuffIt archives, and their values belong to the disc images that The Unarchiver extracts.
+For TKKG 10 and the German Identikit, the values belong to the disc image extracted from the archive.
 
-| Game | Source | Disc image | Size (bytes) | SHA-1 |
-| --- | --- | --- | --- | --- |
-| TKKG 1 | [tkkg-01](https://archive.org/details/tkkg-01) | `TKKG 01.iso` | 319,299,584 | `714f76495fa6e836da8503958b175ab8c0def656` |
-| TKKG 2 | [tkkg-02](https://archive.org/details/tkkg-02) | `TKKG 02.iso` | 394,524,672 | `dc29de0429091c6afdc0603f3a4d8d8390284c4c` |
-| TKKG 3 | [tkkg-03](https://archive.org/details/tkkg-03) | `TKKG 03.iso` | 701,933,568 | `5894f7999e7553b162019a31027e0bf588255376` |
-| TKKG 4 | [tkkg-4_202605](https://archive.org/details/tkkg-4_202605) | `TKKG 04.iso` | 705,468,416 | `8a784ec666c9de15ed2e7fb086afe0c8a62ff391` |
-| TKKG 5 | [tkkg-05](https://archive.org/details/tkkg-05) | `TKKG 05.iso` | 706,058,240 | `2d808e93247c42e219ea806ff9af69a1141042ab` |
-| TKKG 6 | [tkkg-06](https://archive.org/details/tkkg-06) | `TKKG 06.iso` | 415,098,880 | `a22d2e8bfb1b2e848f067845cdde75efd5ac3dcc` |
-| TKKG 7 | [tkkg-7_202201](https://archive.org/details/tkkg-7_202201) | `TKKG7.iso` | 537,102,336 | `babca4878e795612d17b7afbdc87866cc6974449` |
-| TKKG 8 | [tkkg-8_202201](https://archive.org/details/tkkg-8_202201) | `TKKG8.iso` | 575,387,648 | `10d662bbada9222361331c17ad935b7b9726d2d7` |
-| TKKG 9 | [tkkg-9_202201](https://archive.org/details/tkkg-9_202201) | `TKKG9.iso` | 529,373,184 | `bbf0a3cbecacf35a4cb39d7899e94ee03c28d56e` |
-| TKKG 10 | [Macintosh Repository](https://www.macintoshrepository.org/2997-tkkg-10-panik-im-internat) | `TKKG.iso` | 392,865,792 | `21f46144acbc41bd2e3d25941ab6f0515969a61b` |
-| TKKG 11 | [tkkg-11](https://archive.org/details/tkkg-11) | `TKKG11.iso` | 512,897,024 | `7a860358d966dac9a2003b6ccec5e3832dd25a84` |
-| TKKG 12 | [tkkg-12](https://archive.org/details/tkkg-12) | `TKKG12.iso` | 480,014,336 | `a8202c4b0693c0ed9adef7880f4b51ec605e207d` |
-| TKKG 13 | [tkkg-13](https://archive.org/details/tkkg-13) | `TKKG13.iso` | 617,869,312 | `d2b0b4a167f7afb4ab78ca1bcad030212713faa9` |
-| TKKG 14 | [tkkg-14](https://archive.org/details/tkkg-14) | `TKKG14.iso` | 519,098,368 | `f3827ef988129a9eda27898df7bb6e782fc77421` |
-| Identikit (EN) | [Identikit](https://archive.org/details/Identikit) | `Identikit.iso` | 49,698,816 | `eda168d745314ec2781f92e477c675bd2d5f4215` |
-| Identikit (DE) | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
+| Game | Disc image | Size (bytes) | SHA-1 |
+| --- | --- | --- | --- |
+| TKKG 1 | `TKKG 01.iso` | 319,299,584 | `714f76495fa6e836da8503958b175ab8c0def656` |
+| TKKG 2 | `TKKG 02.iso` | 394,524,672 | `dc29de0429091c6afdc0603f3a4d8d8390284c4c` |
+| TKKG 3 | `TKKG 03.iso` | 701,933,568 | `5894f7999e7553b162019a31027e0bf588255376` |
+| TKKG 4 | `TKKG 04.iso` | 705,468,416 | `8a784ec666c9de15ed2e7fb086afe0c8a62ff391` |
+| TKKG 5 | `TKKG 05.iso` | 706,058,240 | `2d808e93247c42e219ea806ff9af69a1141042ab` |
+| TKKG 6 | `TKKG 06.iso` | 415,098,880 | `a22d2e8bfb1b2e848f067845cdde75efd5ac3dcc` |
+| TKKG 7 | `TKKG7.iso` | 537,102,336 | `babca4878e795612d17b7afbdc87866cc6974449` |
+| TKKG 8 | `TKKG8.iso` | 575,387,648 | `10d662bbada9222361331c17ad935b7b9726d2d7` |
+| TKKG 9 | `TKKG9.iso` | 529,373,184 | `bbf0a3cbecacf35a4cb39d7899e94ee03c28d56e` |
+| TKKG 10 | `TKKG.iso` | 392,865,792 | `21f46144acbc41bd2e3d25941ab6f0515969a61b` |
+| TKKG 11 | `TKKG11.iso` | 512,897,024 | `7a860358d966dac9a2003b6ccec5e3832dd25a84` |
+| TKKG 12 | `TKKG12.iso` | 480,014,336 | `a8202c4b0693c0ed9adef7880f4b51ec605e207d` |
+| TKKG 13 | `TKKG13.iso` | 617,869,312 | `d2b0b4a167f7afb4ab78ca1bcad030212713faa9` |
+| TKKG 14 | `TKKG14.iso` | 519,098,368 | `f3827ef988129a9eda27898df7bb6e782fc77421` |
+| Identikit (EN) | `Identikit.iso` | 49,698,816 | `eda168d745314ec2781f92e477c675bd2d5f4215` |
+| Identikit (DE) | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
 
-## Macintosh Repository archives
+## Mac OS 9 virtual machine
 
-These are the SHA-1 values that Macintosh Repository lists for its two downloads. If you still have the archives in your Downloads folder, this command prints their SHA-1:
+`mac-os-9.2.1-utm.zip` has the SHA-256 `13d2bb7db75bc4e8e94e181dd5ded1484a22dd07d5fe91a6464cde338400f508`. To check it before you unpack it, run this command:
 
 ```bash
-shasum ~/Downloads/*.sit
+shasum -a 256 ~/Downloads/mac-os-9.2.1-utm.zip
 ```
 
-| Game | Archive | SHA-1 |
-| --- | --- | --- |
-| TKKG 10 | `TKKG10.iso_.sit` | `88687b0d85353a9a86cb89cf0349ed43b086e205` |
-| Identikit (DE) | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` |
+If Safari has already unpacked the zip, it's no longer in your Downloads folder, so you can't check it.
 
 ## Incomplete copies
 
