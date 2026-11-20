@@ -70,10 +70,9 @@ Most games come from the Internet Archive as disc images that UTM uses directly.
 | TKKG 12 | Alarm in der Geisterbahn | [Internet Archive](https://archive.org/details/tkkg-12) | `TKKG12.iso` | DE |
 | TKKG 13 | Zelle 13 | [Internet Archive](https://archive.org/details/tkkg-13) | `TKKG13.iso` | DE |
 | TKKG 14 | Gefährliche Ferien | [Internet Archive](https://archive.org/details/tkkg-14) | `TKKG14.iso` | DE |
-| Identikit (EN) | Das Phantombild Programm | [Internet Archive](https://archive.org/details/Identikit) | `Identikit.iso` | EN |
-| Identikit (DE) | Das Phantombild Programm | [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) | `TKKG_Identikit_Ger.iso` | DE |
+| Identikit | Das Phantombild Programm | [Internet Archive](https://archive.org/details/Identikit) (EN), [Macintosh Repository](https://www.macintoshrepository.org/4209-tkkg-identikit) (DE) | `Identikit.iso` (EN), `TKKG_Identikit_Ger.iso` (DE) | DE, EN |
 
-DE stands for German and EN for English. TKKG 1 to 9 contain both language versions on one disc.
+DE stands for German and EN for English. TKKG 1 to 9 contain both language versions on one disc. The two Identikit editions are separate discs.
 
 1. Create a folder named `TKKG` in your home folder: in the Finder, choose Go > Home, then File > New Folder.
 2. For each game with an Internet Archive link in the table, open the link and click ISO IMAGE under Download Options. Move the downloaded disc image from your Downloads folder to the `TKKG` folder.
@@ -186,8 +185,7 @@ To shut down the VM, choose Special > Shut Down in Mac OS 9. The Special menu be
 | TKKG 7 to 9 | TKKG 7, TKKG 8, TKKG 9 | TKKG-Start | Thousands |
 | TKKG 10 | TKKG10 | TKKG10 | Thousands, 800 × 600 or more |
 | TKKG 11 to 14 | None (they start from the disc) | TKKG11, TKKG12, TKKG13, TKKG14 | Thousands, 800 × 600 or more |
-| Identikit (EN) | Identikit | Identikit Start | Thousands |
-| Identikit (DE) | Phantombild | Phantombild Start | Thousands |
+| Identikit | Identikit (EN), Phantombild (DE) | Identikit Start (EN), Phantombild Start (DE) | Thousands |
 
 The table shows the names on the discs. The original readme files sometimes spell them differently. TKKG 7 to 14 and the German Identikit ran at Thousands in testing. Thousands is the Mac OS name for 32,768 colours, which most readme and help files of these games ask for, including the English Identikit's readme.
 
