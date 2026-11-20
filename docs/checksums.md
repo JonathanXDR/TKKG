@@ -24,8 +24,6 @@ Without Terminal, select an image in the Finder and choose File > Get Info to se
 
 The Internet Archive lists the same size and SHA-1 for each of its files. TKKG 10 and the German Identikit come from Macintosh Repository as StuffIt archives, and their values belong to the disc images that The Unarchiver extracts.
 
-The games ran from these images in testing, with two exceptions. The English Identikit is untested. TKKG 11 ran from the image `TKKG11.iso` on [Macintosh Repository](https://www.macintoshrepository.org/3133-tkkg-11-film-ab-), which is 513,208,320 bytes with SHA-1 `f73b452ba77e0125eb9684e44f05ccc25dd95ea3`. Its Mac files are identical to those on the Internet Archive image, and the two images differ only in parts that Mac OS 9 doesn't read.
-
 | Game | Source | Disc image | Size (bytes) | SHA-1 |
 | --- | --- | --- | --- | --- |
 | TKKG 1 | [tkkg-01](https://archive.org/details/tkkg-01) | `TKKG 01.iso` | 319,299,584 | `714f76495fa6e836da8503958b175ab8c0def656` |
@@ -62,13 +60,13 @@ shasum ~/Downloads/*.sit
 
 Don't use these copies:
 
-- TKKG 10 in the Internet Archive items `tkkg-10` and `tkkg-10.-panik.im.-internat.-setup`. Its disc image `TKKG 10.iso` is 365,789,184 bytes with SHA-1 `80e0afd3878e6e3ab52f5f7aaa1519680904c960`. Its file systems end at byte 392,598,528, so the last 26.8 MB are missing.
-- TKKG 6 on Macintosh Repository, the archive `tkkg6.iso_.sit` with SHA-1 `86594f41e849da8781e53511be6790f7400d5805`. Its disc image `TKKG6.iso` is 415,827,968 bytes with SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`. Its Mac file system ends at byte 429,620,224, so the last 13.8 MB are missing, and several game files on it contain runs of zero bytes.
-- TKKG 6 in the Internet Archive item [`tkkg-6`](https://archive.org/details/tkkg-6), not the intact `tkkg-06`. Its disc image `TKKG6.iso` is 388,743,168 bytes with SHA-1 `b439f3332533ba2bc540ac2f7e3c56f08c769737`. It contains only the Windows part of the disc, so it has no Mac version of the game.
+- TKKG 10 from the Internet Archive items `tkkg-10` and `tkkg-10.-panik.im.-internat.-setup`. Its disc image `TKKG 10.iso`, 365,789,184 bytes with SHA-1 `80e0afd3878e6e3ab52f5f7aaa1519680904c960`, is missing its last 26.8 MB.
+- TKKG 6 from Macintosh Repository, the archive `tkkg6.iso_.sit` with SHA-1 `86594f41e849da8781e53511be6790f7400d5805`. Its disc image `TKKG6.iso`, 415,827,968 bytes with SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`, is missing its last 13.8 MB and has damaged game files.
+- TKKG 6 from the Internet Archive item [`tkkg-6`](https://archive.org/details/tkkg-6), not the intact `tkkg-06`. Its disc image `TKKG6.iso`, 388,743,168 bytes with SHA-1 `b439f3332533ba2bc540ac2f7e3c56f08c769737`, contains only the Windows version of the game.
 
 ## Readmes from earlier releases
 
-The Internet Archive images of TKKG 1 to 3 are later releases. TKKG 1 has a shorter readme without the hidden hints, and TKKG 2 and 3 have no readme. These readmes in `content` come from the earlier releases on Macintosh Repository. The Mac readme of TKKG 1 is on both releases.
+The Internet Archive images of TKKG 1 to 3 are later releases with a shorter readme or none. These readmes in `content` come from the earlier releases on Macintosh Repository.
 
 | Files | Source release | Disc image | SHA-1 |
 | --- | --- | --- | --- |

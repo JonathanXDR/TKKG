@@ -2,7 +2,7 @@
 
 TKKG (Tim, Karl, Klößchen and Gaby) is a German youth detective series. Between 1997 and 2005, Tivola released 14 TKKG adventure games for Windows and classic Mac OS, plus the TKKG Identikit (Das Phantombild Programm). Two later games, TKKG 15 and 16, came out for Windows only.
 
-The Mac versions need classic Mac OS. The early games need System 7.1 or later, and the later ones need at least Mac OS 8.1, 8.6 or 9.1, depending on the game. TKKG 11 to 14 also run on early Mac OS X, but only on PowerPC Macs. None of them run on current Macs.
+The Mac versions need classic Mac OS, or early Mac OS X on a PowerPC Mac for TKKG 11 to 14, so none of them run on current Macs.
 
 This guide shows how to play the original game discs in [UTM](https://getutm.app/), which emulates a PowerPC Mac running Mac OS 9. UTM runs only on Apple devices, so the guide doesn't cover Windows or Linux.
 
@@ -34,12 +34,10 @@ Some steps also show a Terminal command as an alternative or as an optional chec
 ### 1. Install UTM
 
 > [!IMPORTANT]
-> Use the free download of UTM, not the paid Mac App Store version. The App Store version has the same features, but in November 2026 it was still at 5.0.8, which lacks the Mac OS 9 fixes from 5.0.9.
+> Install UTM 5.0.9 (build 132) or later, because earlier versions lack important Mac OS 9 fixes. The Mac App Store version can lag behind, so use the free download instead.
 
-1. Download UTM 5.0.9 (build 132) or later from [getutm.app](https://getutm.app/) or the [UTM releases on GitHub](https://github.com/utmapp/UTM/releases/latest).
-2. Open the DMG and drag UTM to your Applications folder. UTM > About UTM shows the version with the build number in brackets, for example 5.0.9 (132).
-
-The earlier 5.0.9 builds 130 and 131 can crash a VM at start-up on macOS 14 and later.
+1. Download UTM from [getutm.app](https://getutm.app/) or the [UTM releases on GitHub](https://github.com/utmapp/UTM/releases/latest).
+2. Open the DMG and drag UTM to your Applications folder. To check the version, choose UTM > About UTM. It shows the build number in brackets, for example 5.0.9 (132).
 
 If you use [Homebrew](https://brew.sh/), you can install UTM with this command instead:
 
@@ -49,7 +47,7 @@ brew install --cask utm
 
 ### 2. Download the games
 
-Most games come from the Internet Archive as disc images that UTM uses directly. TKKG 10 and the German edition of the Identikit come from Macintosh Repository as `.sit` StuffIt archives. The Internet Archive has no complete copy of TKKG 10 and only the English edition of the Identikit.
+Most games come from the Internet Archive as disc images that UTM uses directly. TKKG 10 and the German edition of the Identikit come from Macintosh Repository as `.sit` StuffIt archives.
 
 | Game | German title | Download | Disc image | Languages |
 | --- | --- | --- | --- | --- |
@@ -81,7 +79,7 @@ For TKKG 10 and the German Identikit, continue with these steps:
 3. Double-click the archive. The first time, The Unarchiver asks where to extract archives. Choose Extract to Same Folder. The Mac App Store version of The Unarchiver then also asks for permission to use the folder. Click Extract.
 4. Move the extracted disc image to the `TKKG` folder.
 
-According to the rules of Macintosh Repository, downloads through a proxy, a download manager or a VPN that changes your IP address can fail.
+Macintosh Repository downloads can fail through a proxy, a download manager or a VPN that changes your IP address.
 
 > [!NOTE]
 > macOS shows an error when you double-click a disc image, because it can't read the classic Mac file system of these hybrid Mac and Windows discs. Mac OS 9 in UTM reads them without problems, so don't convert them.
@@ -106,7 +104,7 @@ curl -L --fail --create-dirs --output-dir ~/TKKG \
   -o "Identikit.iso" "https://archive.org/download/Identikit/Identikit.iso"
 ```
 
-To extract the Macintosh Repository archives in Terminal instead of The Unarchiver, install the command-line tool `unar`. Homebrew has it ready-made for Apple silicon Macs with macOS 15 or later. On other Macs, Homebrew needs Xcode to build it.
+To extract the Macintosh Repository archives in Terminal instead of The Unarchiver, install the command-line tool `unar`. On Intel Macs and on macOS versions before 15, Homebrew needs Xcode to build it.
 
 ```bash
 brew install unar
@@ -117,8 +115,6 @@ This command extracts the TKKG archives in your Downloads folder into the `TKKG`
 ```bash
 for f in ~/Downloads/[Tt][Kk][Kk][Gg]*.sit; do unar -o ~/TKKG "$f"; done
 ```
-
-Keep the images in the `TKKG` folder. UTM remembers each image by its location, so after a move you have to select it in UTM again.
 
 You can check that every image is complete. This command prints the SHA-1 of every disc image in the `TKKG` folder:
 
@@ -132,7 +128,7 @@ Once all images are in the `TKKG` folder, you can delete the `.sit` archives.
 
 ### 3. Add the Mac OS 9 virtual machine
 
-This guide uses the preinstalled Mac OS 9.2.1 VM that the UTM project published for its former gallery. Every game ran in it with the settings below. Only the English Identikit is untested. UTM no longer updates this VM, but it still works.
+This guide uses the preinstalled Mac OS 9.2.1 VM from the UTM project. The games in this guide are known to work in it with the settings below, except the English Identikit, which is untested.
 
 Download [`mac-os-9.2.1-utm.zip`](https://github.com/utmapp/vm-downloads/releases/download/mac-os-9.2.1/mac-os-9.2.1-utm.zip) (141 MB) from the UTM project's [vm-downloads releases](https://github.com/utmapp/vm-downloads/releases/tag/mac-os-9.2.1).
 
@@ -148,11 +144,9 @@ Then add the VM to UTM:
 2. Move `Mac OS 9.2.1.utm` to the `TKKG` folder. UTM runs a VM from the place you open it, without copying it.
 3. Double-click `Mac OS 9.2.1.utm`. UTM opens and lists the VM in its sidebar.
 4. Select the VM and click Edit, the slider icon at the right end of the toolbar. You can also right-click the VM and choose Edit.
-5. Under System, set CPU to `g3`.
+5. Under System, set CPU to `g3`. TKKG 12 quits after its intro on the default G4 processor.
 6. Optionally, right-click Network in the sidebar and choose Remove. The games don't use the network, and Mac OS 9 no longer gets security updates.
 7. Click Save.
-
-On the default G4 processor, TKKG 12 crashed right after its intro in testing. Leave the memory at 512 MB, because more memory doesn't make the emulation faster.
 
 ### 4. Start Mac OS 9 and set the display
 
@@ -160,9 +154,9 @@ On the default G4 processor, TKKG 12 crashed right after its intro in testing. L
 2. On the first start, the Mac OS Setup Assistant opens, and possibly the AirPort Setup Assistant. The games need neither, so quit them with Command-Q.
 3. Open the Apple menu > Control Panels > Monitors. Use the Apple logo at the left end of the menu bar inside the VM window, not the one in the macOS menu bar.
 4. Choose Thousands under Color Depth and 800 × 600 under Resolution, then close the window with the box at its top left.
-5. Optionally, set up a printer that saves to files. Some games can print, and Mac OS 9 froze when TKKG 6 printed while no printer was set up, so do this before you play TKKG 6. Open the "untitled" hard disk, then Applications (Mac OS 9) > Utilities > Desktop Printer Utility. Choose Translator (PostScript) and create the desktop printer. Each print then asks for a file name and saves a PostScript file in Mac OS 9.
+5. Optionally, set up a printer that saves to files. Do this before you play TKKG 6, because Mac OS 9 can freeze when TKKG 6 prints while no printer is set up. Open the "untitled" hard disk, then Applications (Mac OS 9) > Utilities > Desktop Printer Utility. Choose Translator (PostScript) and create the desktop printer. Each print then asks for a file name and saves a PostScript file in Mac OS 9.
 
-These display settings suit every game except TKKG 6, which needs 256 colours. [Start a game](#start-a-game) covers that. The mouse pointer moves freely between the VM window and the rest of your Mac.
+These display settings suit every game except TKKG 6, which needs 256 colours. [Start a game](#start-a-game) covers that.
 
 To shut down the VM, choose Special > Shut Down in Mac OS 9. The Special menu belongs to the Finder, so if you don't see it, click the desktop first.
 
@@ -187,7 +181,7 @@ To shut down the VM, choose Special > Shut Down in Mac OS 9. The Special menu be
 | TKKG 11 to 14 | None (they start from the disc) | TKKG11, TKKG12, TKKG13, TKKG14 | Thousands, 800 × 600 or more |
 | Identikit | Identikit (EN), Phantombild (DE) | Identikit Start (EN), Phantombild Start (DE) | Thousands |
 
-The table shows the names on the discs. The original readme files sometimes spell them differently. TKKG 7 to 14 and the German Identikit ran at Thousands in testing. Thousands is the Mac OS name for 32,768 colours. Most readme and help files of these games ask for it, including the English Identikit's readme.
+The table shows the names on the discs, which the original readme files sometimes spell differently. Thousands is the Mac OS name for 32,768 colours, the setting that most readme and help files ask for.
 
 Leave the disc inserted while you play, because the games load pictures and sound from it. If a game opens with a TKKG membership card, click Neues Mitglied (new member) to start a new game. Next time, click Mitglied (member) and choose your name to continue where you left off.
 
@@ -200,7 +194,7 @@ Leave the disc inserted while you play, because the games load pictures and soun
 ### Quit and play again later
 
 > [!WARNING]
-> Always quit the game from inside it before you shut down Mac OS 9 or stop the VM. If you stop the VM while a game is running, you can lose progress. In testing, TKKG 6 lost everything played since its last quit from inside the game.
+> Quit each game from inside the game before you shut down Mac OS 9 or stop the VM. Otherwise, you can lose unsaved progress.
 
 To finish, choose Special > Shut Down in Mac OS 9, then quit UTM.
 
@@ -212,11 +206,11 @@ The games save your progress inside the VM. To back it up, shut down the VM and 
 
 ### The VM doesn't start, or Mac OS 9 crashes at start-up with a sound error
 
-The emulated sound device, Screamer, has known problems. Update to UTM 5.0.9 or later, which fixes several of them. If the problem stays, remove the sound device. If the VM is still running, click Stop in UTM. Then select the VM, click Edit, right-click Sound in the sidebar, choose Remove and click Save. The games then play without sound.
+Update to UTM 5.0.9 or later, which fixes several problems with the emulated sound device. If the problem stays, remove the sound device. If the VM is still running, click Stop in UTM. Then select the VM, click Edit, right-click Sound in the sidebar, choose Remove and click Save. The games then play without sound.
 
 ### Mac OS 9 hangs at "Starting Up…" or after Restart
 
-UTM 5.0.8 and earlier have two bugs that cause this, [UTM issue #8033](https://github.com/utmapp/UTM/issues/8033) and [UTM issue #7999](https://github.com/utmapp/UTM/issues/7999). Update to UTM 5.0.9 or later. With an older version, stop the VM in UTM, start it again and use Shut Down instead of Restart.
+UTM 5.0.8 and earlier have bugs that cause this. Update to UTM 5.0.9 or later. With an older version, stop the VM in UTM, start it again and use Shut Down instead of Restart.
 
 If the VM window stays black apart from the menu bar clock after start-up, click inside the window.
 
@@ -233,18 +227,18 @@ UTM can only open files that you selected in UTM yourself. After you move or ren
 
 ### UTM reports "IDE unit 0 is in use"
 
-This happens after you add a drive to the VM. The UTM project built the preinstalled VM with an older UTM version, which put each IDE drive on its own bus. A newly added drive can then claim a slot that is already taken. You don't need an extra drive, because the VM already has a CD/DVD drive.
+This error appears after you add a drive to the preinstalled VM. You don't need an extra drive, because the VM already has a CD/DVD drive, so delete the one you added.
 
 > [!CAUTION]
 > UTM permanently deletes the disk image of a drive you delete. If you delete the VM's hard disk instead of the drive you added, you lose Mac OS 9 and all game progress.
 
 Open the VM settings. The drive you added is the last IDE Drive under Drives. Right-click it, choose Delete, confirm with Delete and click Save.
 
-If you do need another drive, click Update Interface on every IDE drive that shows this button, then click Save. This puts all drives on the current layout with two drives per bus.
+If you do need another drive, click Update Interface on every IDE drive that shows this button, then click Save.
 
 ### TKKG 12 quits after the intro with "an error of type 3"
 
-The VM uses the default G4 processor. Shut down Mac OS 9 and set System > CPU to `g3` in the VM settings, as described in [Add the Mac OS 9 virtual machine](#3-add-the-mac-os-9-virtual-machine).
+The VM still uses the default G4 processor. Shut down Mac OS 9 and set System > CPU to `g3` in the VM settings, as described in [Add the Mac OS 9 virtual machine](#3-add-the-mac-os-9-virtual-machine).
 
 ### Colours look wrong or a game complains about the display
 
@@ -256,7 +250,7 @@ You are using a damaged copy of the disc, such as the one on Macintosh Repositor
 
 ### Mac OS 9 can freeze when a game prints
 
-Mac OS 9 froze when TKKG 6 printed while no printer was set up. If this happens, click Stop in UTM and confirm that you want to force stop the VM. You can lose progress made since you last quit the game from inside it. At the next start, Disk First Aid checks the hard disk. Let it finish.
+Mac OS 9 can freeze when TKKG 6 prints while no printer is set up. If this happens, click Stop in UTM and confirm that you want to force stop the VM. You can lose progress made since you last quit the game from inside it. At the next start, Disk First Aid checks the hard disk. Let it finish.
 
 To prevent the freeze, set up the file printer described in step 5 of [Start Mac OS 9 and set the display](#4-start-mac-os-9-and-set-the-display). The printouts of TKKG 1, 2 and 4 are also in the [`content`](content) folder as PDFs.
 
@@ -280,7 +274,7 @@ The [`content`](content) folder holds documentation copied from the original dis
 | [`TKKG4`](content/TKKG4) | Help file with the solution. Web pages from the in-game city archive computer (`HTMLD` German, `HTMLE` English). Printouts: piano basics, "Für Elise" sheet music, Oma Peper's nut cake recipe (German and English). |
 | [`TKKG5`](content/TKKG5) | Help file with the solution. |
 | [`TKKG6`](content/TKKG6) | Help file with the solution. The TKKG 6 readme is in `TKKG7`. |
-| [`TKKG7`](content/TKKG7) | Help file with the solution. The readme belongs to TKKG 6: the original TKKG 7 disc contains the same mix-up and has no readme of its own. |
+| [`TKKG7`](content/TKKG7) | Help file with the solution. The readme belongs to TKKG 6. The original TKKG 7 disc has the same mix-up and no readme of its own. |
 | [`TKKG8`](content/TKKG8) | Help file with the solution, readme. |
 | [`TKKG9`](content/TKKG9) | Help file with the solution. |
 | [`TKKG10`](content/TKKG10), [`TKKG11`](content/TKKG11), [`TKKG12`](content/TKKG12) | Readme. |
@@ -289,12 +283,12 @@ The [`content`](content) folder holds documentation copied from the original dis
 
 The folders contain these files:
 
-- `LIESMICH.TXT` is the readme, stored here as UTF-8 text. Most readmes list system requirements, installation steps and the historical Tivola support contacts. The readmes of TKKG 1 to 3 hide hints far below the main text. They come from earlier releases of these games. On the Internet Archive images, TKKG 1 has a shorter readme without the hints, and TKKG 2 and 3 have none. [Checksums](docs/checksums.md) lists the sources.
+- `LIESMICH.TXT` is the readme, stored here as UTF-8 text. Most readmes list system requirements, installation steps and the historical Tivola support contacts. The readmes of TKKG 1 to 3 hide hints far below the main text. These three readmes come from earlier releases, because the Internet Archive images have a shorter readme or none. [Checksums](docs/checksums.md) lists the sources.
 - `README.TXT` in `TKKG_Identikit` is the readme of the English Identikit edition, also stored as UTF-8 text.
-- `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The Mac readmes of TKKG 10 to 14 and both Identikit editions have the same content as their Windows readme. TKKG 11 to 14 store it as a PDF. The discs of TKKG 4 to 9 have no Mac readme.
+- `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The other games have no separate Mac readme, or one with the same content as the Windows readme.
 - `HILFE.PDF` is the game's help file. For TKKG 1 to 9, it also covers system requirements and troubleshooting before the full solution. The solution gives away the whole case, so read it only if you are stuck.
 - `PRINT/PCT` holds the print pages as stored on the disc, in the Macintosh PICT format. `PRINT/PDF` holds PDF conversions of them. The PDF pages are larger than A4, so choose a scale-to-fit option when you print.
-- `HTMLD` and `HTMLE` in `TKKG4` hold the web pages. Open their `INDEX.HTM` in a web browser. The pages refer to their files in lowercase, so they only work on a case-insensitive file system, which is the macOS default.
+- `HTMLD` and `HTMLE` in `TKKG4` hold the web pages. Open their `INDEX.HTM` in a web browser. The pages need a case-insensitive file system, which is the macOS default.
 
 ## Advanced topics
 
@@ -303,4 +297,4 @@ The folders contain these files:
 
 ### Install Mac OS 9 yourself
 
-Instead of the preinstalled VM, UTM can create a new VM from a Mac OS 9 installer disc image that you provide. Click + in UTM, choose Emulate > Classic Mac OS and select Power Macintosh G4 (1999, PPC). UTM's [Classic Mac OS guide](https://docs.getutm.app/guides/classic-macos/) describes the steps. Fresh installs of Mac OS 9.2.1 and 9.2.2 can freeze at "About 4 minutes" remaining. This bug, [UTM issue #6936](https://github.com/utmapp/UTM/issues/6936), is still open, so this guide uses the preinstalled VM. If you build your own VM, set the CPU to `g3` as well.
+Instead of the preinstalled VM, UTM can create a new VM from a Mac OS 9 installer disc image that you provide. Click + in UTM, choose Emulate > Classic Mac OS and select Power Macintosh G4 (1999, PPC). UTM's [Classic Mac OS guide](https://docs.getutm.app/guides/classic-macos/) describes the steps. Installing Mac OS 9.2.1 or 9.2.2 can freeze at "About 4 minutes" remaining because of a known UTM bug, [UTM issue #6936](https://github.com/utmapp/UTM/issues/6936). This guide uses the preinstalled VM for that reason. If you build your own VM, set the CPU to `g3` as well.
