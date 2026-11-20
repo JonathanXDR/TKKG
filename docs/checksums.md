@@ -27,3 +27,13 @@ The archive SHA-1 values are the ones Macintosh Repository lists on each downloa
 | Identikit | `tkkg_identikit_ger.iso_.sit` | `38e5f72832c81a0425bc9dfdcaa96a4d065ba9d9` | `TKKG_Identikit_Ger.iso` | 69,984,256 | `da9e518dcbf3dfb0077287d5b6dfdece729a0749` |
 
 Don't use the TKKG 6 download from Macintosh Repository. Its archive `tkkg6.iso_.sit` (SHA-1 `86594f41e849da8781e53511be6790f7400d5805`) contains a damaged `TKKG6.iso` of 415,827,968 bytes (SHA-1 `8a44c141a1342ed46f6f5b8ca528212a4dca1d5c`). Its Mac file system ends at byte 429,620,224, so the last 13.8 MB are missing. The intact `TKKG 06.iso` is a different edition with a smaller file system, which is why it is shorter.
+
+## Help files from later releases
+
+The Macintosh Repository discs of TKKG 1 to 3 contain no help file. The help files of these three games in `content` come from later releases on the Internet Archive and are identical to the files on those discs.
+
+| File | File SHA-1 | Source | Source disc image | Image SHA-1 |
+| --- | --- | --- | --- | --- |
+| [`content/TKKG1/HILFE.PDF`](../content/TKKG1/HILFE.PDF) | `c3822059d139562d9a70ac5fb5f0cb91112e09ba` | [tkkg-01](https://archive.org/details/tkkg-01) (2002 release) | `TKKG 01.iso` | `714f76495fa6e836da8503958b175ab8c0def656` |
+| [`content/TKKG2/HILFE.PDF`](../content/TKKG2/HILFE.PDF) | `e34eea198ac74700fab926fb9c6def6016d57d0c` | [tkkg-02](https://archive.org/details/tkkg-02) (2000 release) | `TKKG 02.iso` | `dc29de0429091c6afdc0603f3a4d8d8390284c4c` |
+| [`content/TKKG3/HILFE.PDF`](../content/TKKG3/HILFE.PDF) | `03a25d016904ca8b32336c1942ef397b5797e6d9` | [tkkg-03](https://archive.org/details/tkkg-03) (1999 release) | `TKKG 03.iso` | `5894f7999e7553b162019a31027e0bf588255376` |
