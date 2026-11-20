@@ -203,7 +203,7 @@ The [`content`](content) folder holds documentation copied from the original dis
 - `LIESMICH_MAC.TXT` is the Mac readme from the game folder on the discs of TKKG 1 to 3, also stored as UTF-8 text. It lists the Mac system requirements and installation steps. The Mac readmes of TKKG 10 to 14 and the Identikit have the same content as their `LIESMICH.TXT` (TKKG 11 to 14 store it as a PDF). The discs of TKKG 4 to 9 have no Mac readme.
 - `HILFE.PDF` is the game's help file. For TKKG 1 to 9, it also covers system requirements and troubleshooting before the full solution. The solution gives away the whole case, so read it only if you are stuck. The Macintosh Repository discs of TKKG 1 to 3 have no help file, so the help files of these games come from later releases, listed in [Checksums](docs/checksums.md).
 - `PRINT/PCT` holds the print pages as stored on the disc, in the Macintosh PICT format. `PRINT/PDF` holds PDF conversions of them. The PDF pages are larger than A4, so choose a scale-to-fit option when you print.
-- Open `INDEX.HTM` in `TKKG4/HTMLD` or `TKKG4/HTMLE` in a web browser to see the web pages.
+- Open `INDEX.HTM` in `TKKG4/HTMLD` or `TKKG4/HTMLE` in a web browser to see the web pages. The pages refer to their files in lowercase, so they only work on a case-insensitive file system, which is the macOS default.
 
 ## Accessing game data
 
