@@ -12,10 +12,6 @@ The [`content`](content) folder holds the readme files, help files and printouts
 
 - [Requirements](#requirements)
 - [Setup](#setup)
-  1. [Install UTM](#1-install-utm)
-  2. [Download the games](#2-download-the-games)
-  3. [Add the Mac OS 9 virtual machine](#3-add-the-mac-os-9-virtual-machine)
-  4. [Start Mac OS 9 and set the display](#4-start-mac-os-9-and-set-the-display)
 - [Playing](#playing)
 - [Troubleshooting](#troubleshooting)
 - [Original game documentation](#original-game-documentation)
